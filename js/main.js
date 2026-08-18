@@ -186,7 +186,7 @@ function renderMenu(){
   orderGrid.innerHTML='';
   ORDER_MENU.filter(item=>activeCategory==='Wszystkie'||item.category===activeCategory).forEach((item,index)=>{
     const article=document.createElement('article'); article.className='order-card menu-enter'; article.style.setProperty('--enter-delay',`${Math.min(index,7)*55}ms`);
-    const variants=item.variants?`<label class="variant-picker"><span>Wybierz wariant</span><select aria-label="Wariant ${item.name}">${item.variants.map(([name,price],variantIndex)=>`<option value="${variantIndex}" data-price="${price}">${name} · ${money(price)}</option>`).join('')}</select></label>`:'';
+    const variants=item.variants?`<label class="variant-picker"><span>Wybierz wariant</span><select aria-label="Wariant ${item.name}">${item.variants.map(([name,price],variantIndex)=>`<option value="${variantIndex}" data-price="${price}">${name} · ${money(price)}</option>`).join('')}</select></label>`:'<div class="variant-placeholder" aria-hidden="true"></div>';
     article.innerHTML=`<div class="dish-visual"><img src="${item.image}" alt="${item.name}" loading="lazy"><span class="dish-index">${String(index+1).padStart(2,'0')}</span></div><div class="order-card-content"><h3>${item.name}</h3><p>${item.description}</p>${variants}<div class="order-card-foot"><strong class="dish-price">${money(item.variants?.[0]?.[1]??item.price)}</strong><button class="add-to-cart" type="button" data-add="${item.id}" aria-label="Dodaj ${item.name} do koszyka"><span>+</span> Dodaj</button></div></div>`;
     orderGrid.append(article);
   });
