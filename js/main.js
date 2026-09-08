@@ -160,7 +160,7 @@ ORDER_MENU.slice(0,31).forEach((item,index) => {
 // does not contain an unambiguous match for that exact dish yet.
 const realDishPhotoIds = [
   'zupa-mala','frytki','dimsum','sajgonki','springrolls','krewetki-panierowane','ser-smazony',
-  'wieprzowina-karmel','slodko-kwasny','curry','losos','bone','udko-salatka','udko-smazone',
+  'wieprzowina-karmel','slodko-kwasny','curry','losos','bone','udko-salatka','kaczka',
   'ryz','makaron','makaron-ryzowy','padthai','udon','pho','bun','bunbo','bunnemran',
   's1','s2','s3','s4','s7','s8','s9','s10','s11','s12','s13','s14','s15','s16','s17','s18',
   's19','s20','s21','s22','s23','s24','s25','s26','s27','s28','s29','s30','s31','s32',
