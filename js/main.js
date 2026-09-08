@@ -154,6 +154,22 @@ const ORDER_MENU = [
 ORDER_MENU.slice(0,31).forEach((item,index) => {
   item.image = `assets/asian/${String(index+1).padStart(2,'0')}.jpg`;
 });
+
+// Real restaurant photos matched against the numbered dishes on both menu cards.
+// Items not listed here keep their existing illustration because the photo folder
+// does not contain an unambiguous match for that exact dish yet.
+const realDishPhotoIds = [
+  'zupa-mala','frytki','dimsum','sajgonki','springrolls','krewetki-panierowane','ser-smazony',
+  'wieprzowina-karmel','slodko-kwasny','curry','losos','bone','udko-salatka','udko-smazone',
+  'ryz','makaron','makaron-ryzowy','padthai','udon','pho','bun','bunbo','bunnemran',
+  's1','s2','s3','s4','s7','s8','s9','s10','s11','s12','s13','s14','s15','s16','s17','s18',
+  's19','s20','s21','s22','s23','s24','s25','s26','s27','s28','s29','s30','s31','s32',
+  's33','s34','s35','s36','s37','s38','s39','s40'
+];
+realDishPhotoIds.forEach(id => {
+  const item = ORDER_MENU.find(dish => dish.id === id);
+  if (item) item.image = `assets/menu/${id}.jpg`;
+});
 const money = value => new Intl.NumberFormat('pl-PL',{style:'currency',currency:'PLN'}).format(value);
 let cart = JSON.parse(localStorage.getItem('hnq-cart') || '{}');
 const resolveCartItem = key => {
