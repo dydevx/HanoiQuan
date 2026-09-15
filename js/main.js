@@ -144,13 +144,13 @@ const ORDER_MENU = [
   {id:'s31',name:'Sashimi łosoś',category:'Sushi',price:59,image:'assets/sushi/nigiri-salmon.jpg',description:'Sashimi ze świeżego łososia — 6 szt.'},
   {id:'s32',name:'Sałatka z surowego łososia',category:'Sushi',price:45,image:'assets/sushi/nigiri-salmon.jpg',description:'Sałatka z surowym łososiem i awokado.'},
   {id:'s33',name:'Sałatka ze smażonym łososiem',category:'Sushi',price:45,image:'assets/sushi/futomaki-salmon.jpg',description:'Sałatka ze smażonym łososiem i awokado.'},
-  {id:'s34',name:'Sushi Set — Zestaw Maki',category:'Zestawy sushi',price:49,image:'assets/sushi/maki-set-24.jpg',description:'Hosomaki z łososiem, tuńczykiem i awokado — 24 szt.'},
-  {id:'s35',name:'Zestaw Maki',category:'Zestawy sushi',price:45,image:'assets/sushi/maki-set-24.jpg',description:'Hosomaki ogórek, awokado i paluszki krabowe — 24 szt.'},
-  {id:'s36',name:'Sake Set',category:'Zestawy sushi',price:120,image:'assets/sushi/maki-set-24.jpg',description:'Uramaki łosoś, futomaki tuńczyk, hosomaki łosoś i tuńczyk oraz nigiri łosoś — 34 szt.'},
-  {id:'s37',name:'Salamon Set',category:'Zestawy sushi',price:149,image:'assets/sushi/uramaki.jpg',description:'Futomaki łosoś i miękki krab, uramaki łosoś, hosomaki tuńczyk oraz nigiri węgorz — 34 szt.'},
-  {id:'s38',name:'Set',category:'Zestawy sushi',price:79,image:'assets/sushi/maki-set-24.jpg',description:'Uramaki z łososiem i tuńczykiem oraz nigiri z łososiem i tuńczykiem — 20 szt.'},
-  {id:'s39',name:'Family Set',category:'Zestawy sushi',price:169,image:'assets/sushi/maki-set-24.jpg',description:'Futomaki łosoś i smażone krewetki, uramaki łosoś i tuńczyk, hosomaki awokado i ogórek — 48 szt.'},
-  {id:'s40',name:'Kyoto Set',category:'Zestawy sushi',price:259,image:'assets/sushi/maki-set-24.jpg',description:'Futomaki, Tobiko Roll, uramaki, hosomaki i nigiri — 70 szt.'}
+  {id:'s34',name:'Sushi Set — Zestaw Maki',category:'Sushi Set',price:49,image:'assets/sushi/maki-set-24.jpg',description:'Hosomaki z łososiem, tuńczykiem i awokado — 24 szt.'},
+  {id:'s35',name:'Zestaw Maki',category:'Sushi Set',price:45,image:'assets/sushi/maki-set-24.jpg',description:'Hosomaki ogórek, awokado i paluszki krabowe — 24 szt.'},
+  {id:'s36',name:'Sake Set',category:'Sushi Set',price:120,image:'assets/sushi/maki-set-24.jpg',description:'Uramaki łosoś, futomaki tuńczyk, hosomaki łosoś i tuńczyk oraz nigiri łosoś — 34 szt.'},
+  {id:'s37',name:'Salamon Set',category:'Sushi Set',price:149,image:'assets/sushi/uramaki.jpg',description:'Futomaki łosoś i miękki krab, uramaki łosoś, hosomaki tuńczyk oraz nigiri węgorz — 34 szt.'},
+  {id:'s38',name:'Set',category:'Sushi Set',price:79,image:'assets/sushi/maki-set-24.jpg',description:'Uramaki z łososiem i tuńczykiem oraz nigiri z łososiem i tuńczykiem — 20 szt.'},
+  {id:'s39',name:'Family Set',category:'Sushi Set',price:169,image:'assets/sushi/maki-set-24.jpg',description:'Futomaki łosoś i smażone krewetki, uramaki łosoś i tuńczyk, hosomaki awokado i ogórek — 48 szt.'},
+  {id:'s40',name:'Kyoto Set',category:'Sushi Set',price:259,image:'assets/sushi/maki-set-24.jpg',description:'Futomaki, Tobiko Roll, uramaki, hosomaki i nigiri — 70 szt.'}
 ];
 ORDER_MENU.slice(0,32).forEach((item,index) => {
   item.menuNumber = String(index + 1);
@@ -161,11 +161,9 @@ ORDER_MENU.slice(32).forEach(item => {
 });
 
 // Real restaurant photos matched against the numbered dishes on both menu cards.
-// Item #9 keeps its existing illustration because the new photo folder does not
-// contain an unambiguous match for that exact dish yet.
 const realDishPhotoIds = [
   'zupa-mala','frytki','dimsum','sajgonki','springrolls','springrolls-krewetki',
-  'krewetki-panierowane','ser-smazony','kungbao','wieprzowina-karmel','sos-tajski',
+  'krewetki-panierowane','ser-smazony','kurczak-panierowany','kungbao','wieprzowina-karmel','sos-tajski',
   'slodko-kwasny','curry','losos','bone','udko-salatka','udko-smazone','kaczka','kaczka-salatka',
   'ryz','makaron','makaron-ryzowy','padthai','udon','pho','bun','pho-kurczak-sos','bunbo','bunnemran','buncha','krab-tamaryndowy',
   's1','s2','s3','s4','s5','s6','s7','s8','s9','s10','s11','s12','s13','s14','s15','s16','s17','s18',
