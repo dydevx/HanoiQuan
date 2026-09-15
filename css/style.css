@@ -79,6 +79,8 @@ h1, h2 { margin: 0; font: 800 clamp(48px, 5vw, 76px)/.88 var(--display); letter-
 .order-card:hover { border-color: var(--ink); }
 .dish-visual { position: relative; flex: 0 0 auto; width: 100%; height: auto; aspect-ratio: 4 / 3; overflow: hidden; background: #28231f; }
 .dish-visual img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; backface-visibility: hidden; transform: translateZ(0); transition: transform .65s cubic-bezier(.22,1,.36,1), filter .35s ease; }
+.dish-image-pair { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 2px; background: var(--ink); }
+.dish-visual .dish-image-pair img { position: relative; inset: auto; min-width: 0; height: 100%; }
 .order-card:hover .dish-visual img { transform: scale(1.065); filter: saturate(1.12); }
 .dish-index { position: absolute; top: 12px; left: 12px; display: grid; place-items: center; width: 35px; height: 35px; background: rgba(18,16,15,.9); color: white; font: 700 13px/1 var(--display); }
 .order-card-content { flex: 1; min-width: 0; min-height: 0; display: flex; flex-direction: column; padding: 19px 18px 18px; }
