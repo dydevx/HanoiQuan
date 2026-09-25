@@ -96,7 +96,7 @@ const ORDER_MENU = [
   {id:'losos',name:'Łosoś',category:'Dania główne',price:49,image:'image_1786957935942.jpg',description:'Filet z łososia przygotowany w wybranym stylu.',variants:[['Sos teriyaki',49],['Masło i sos pomarańczowy',49],['Sos pieprzowy',49]]},
   {id:'bone',name:'Bò Né',category:'Dania główne',price:45,image:'image_1786957935937.jpg',description:'Wołowina podawana na gorącym półmisku.'},
   {id:'udko-salatka',name:'Udko z kurczaka smażone z sałatką mieszaną',category:'Dania główne',price:39,image:'image_1786957935945.jpg',description:'Smażone udko z kurczaka ze świeżą sałatką mieszaną.'},
-  {id:'udko-smazone',name:'Udko z kurczaka smażone',category:'Dania główne',price:38,image:'image_1786957935937.jpg',description:'Chrupiące udko z wybranym sosem.',variants:[['Sos pieprzowy',38],['Sos tajski ostry',38],['Sos curry',38],['Sos słodko-kwaśny',38]]},
+  {id:'udko-smazone',name:'Udko z kurczaka smażone',category:'Dania główne',price:39,image:'image_1786957935937.jpg',description:'Chrupiące udko z kurczaka z wybranym sosem.',variants:[['Sos pieprzowy',39],['Sos tajski ostry',39],['Sos curry',39],['Sos słodko-kwaśny',39]]},
   {id:'kaczka',name:'Smażona kaczka',category:'Dania główne',price:45,image:'assets/dishes/smazona-kaczka.jpg',description:'Chrupiąca kaczka podawana z wybranym sosem.',variants:[['Sos pieprzowy',45],['Sos tajski',45],['Sos curry',45],['Sos słodko-kwaśny',45]]},
   {id:'kaczka-salatka',name:'Smażona kaczka z sałatką mieszaną',category:'Dania główne',price:45,image:'assets/dishes/smazona-kaczka.jpg',description:'Chrupiąca kaczka ze świeżą sałatką mieszaną.'},
   {id:'ryz',name:'Smażony ryż',category:'Ryż i makarony',price:30,image:'assets/dishes/smazony-ryz.jpg',description:'Ryż smażony z jajkiem i warzywami.',variants:[['Kurczak',35],['Wołowina',39],['Krewetki',39],['Tofu',30]]},
@@ -126,10 +126,10 @@ const ORDER_MENU = [
   {id:'s13',name:'Futomaki świeży łosoś',category:'Sushi',price:32,image:'assets/sushi/futomaki-salmon.jpg',description:'Futomaki ze świeżym łososiem — 8 szt.'},
   {id:'s14',name:'Futomaki tuńczyk',category:'Sushi',price:35,image:'assets/sushi/tuna.jpg',description:'Futomaki z tuńczykiem — 8 szt.'},
   {id:'s15',name:'Futomaki smażone krewetki',category:'Sushi',price:35,image:'assets/sushi/shrimp.jpg',description:'Futomaki ze smażonymi krewetkami — 8 szt.'},
-  {id:'s16',name:'Futomaki krab miękki',category:'Sushi',price:39,image:'assets/sushi/shrimp.jpg',description:'Futomaki z miękkim krabem — 8 szt.'},
-  {id:'s17',name:'Futomaki pierś z kurczaka',category:'Sushi',price:32,image:'assets/sushi/futomaki-salmon.jpg',description:'Futomaki z piersią kurczaka — 8 szt.'},
-  {id:'s18',name:'Futomaki smażony łosoś',category:'Sushi',price:30,image:'assets/sushi/futomaki-salmon.jpg',description:'Futomaki ze smażonym łososiem — 8 szt.'},
-  {id:'s19',name:'Futomaki paluszki krabowe MIX',category:'Sushi',price:30,image:'assets/sushi/uramaki.jpg',description:'Futomaki z paluszkami krabowymi — 8 szt.'},
+  {id:'s16',name:'Futomaki krab miękki',category:'Sushi',price:39,image:'assets/sushi/shrimp.jpg',description:'Miękki krab, ryż i nori — 8 szt.'},
+  {id:'s17',name:'Futomaki pierś z kurczaka',category:'Sushi',price:32,image:'assets/sushi/futomaki-salmon.jpg',description:'Pierś z kurczaka, warzywa, ryż i nori — 8 szt.'},
+  {id:'s18',name:'Futomaki smażony łosoś',category:'Sushi',price:39,image:'assets/sushi/futomaki-salmon.jpg',description:'Smażony łosoś, warzywa, ryż i nori — 8 szt.'},
+  {id:'s19',name:'Futomaki paluszki krabowe MIX',category:'Sushi',price:30,image:'assets/sushi/uramaki.jpg',description:'Paluszki krabowe, warzywa, ryż i nori — 8 szt.'},
   {id:'s20',name:'Futomaki tofu',category:'Sushi',price:25,image:'assets/sushi/uramaki.jpg',description:'Wegetariańskie futomaki z tofu — 8 szt.'},
   {id:'s21',name:'Uramaki łosoś',category:'Sushi',price:29,image:'assets/sushi/uramaki.jpg',description:'Uramaki z łososiem — 8 szt.'},
   {id:'s22',name:'Uramaki tuńczyk',category:'Sushi',price:35,image:'assets/sushi/tuna.jpg',description:'Uramaki z tuńczykiem — 8 szt.'},
@@ -174,6 +174,16 @@ realDishPhotoIds.forEach(id => {
   const item = ORDER_MENU.find(dish => dish.id === id);
   if (item) item.image = `assets/menu/${id}.jpg`;
 });
+// Keep corrected menu photos with their matching dishes (S17/S18 were named in reverse; S35 has balanced exposure).
+const correctedDishPhotos = {
+  s17: 'assets/menu/s18.jpg',
+  s18: 'assets/menu/s17.jpg',
+  s35: 'assets/menu/s35-balanced.png'
+};
+Object.entries(correctedDishPhotos).forEach(([dishId, photoPath]) => {
+  const item = ORDER_MENU.find(dish => dish.id === dishId);
+  if (item) item.image = photoPath;
+});
 const money = value => new Intl.NumberFormat('pl-PL',{style:'currency',currency:'PLN'}).format(value);
 let cart = JSON.parse(localStorage.getItem('hnq-cart') || '{}');
 const resolveCartItem = key => {
@@ -205,11 +215,11 @@ function renderCategories(){
 function renderMenu(){
   orderGrid.innerHTML='';
   ORDER_MENU.filter(item=>activeCategory==='Wszystkie'||item.category===activeCategory).forEach((item,index)=>{
-    const article=document.createElement('article'); article.className='order-card menu-enter'; article.style.setProperty('--enter-delay',`${Math.min(index,7)*55}ms`);
+    const article=document.createElement('article'); article.className='order-card menu-enter'; article.dataset.dishId=item.id; article.style.setProperty('--enter-delay',`${Math.min(index,7)*55}ms`);
     const variants=item.variants?`<label class="variant-picker"><span>Wybierz wariant</span><select aria-label="Wariant ${item.name}">${item.variants.map(([name,price],variantIndex)=>`<option value="${variantIndex}" data-price="${price}">${name} · ${money(price)}</option>`).join('')}</select></label>`:'<div class="variant-placeholder" aria-hidden="true"></div>';
     const photos=item.images??[item.image];
     const photoMarkup=photos.length>1?`<div class="dish-image-pair">${photos.map((src,photoIndex)=>`<img src="${src}" alt="${item.name} — zdjęcie ${photoIndex+1}" loading="lazy">`).join('')}</div>`:`<img src="${item.image}" alt="${item.name}" loading="lazy">`;
-    article.innerHTML=`<div class="dish-visual">${photoMarkup}<span class="dish-index">${item.menuNumber}</span></div><div class="order-card-content"><h3>${item.name}</h3><p>${item.description}</p>${variants}<div class="order-card-foot"><strong class="dish-price">${money(item.variants?.[0]?.[1]??item.price)}</strong><button class="add-to-cart" type="button" data-add="${item.id}" aria-label="Dodaj ${item.name} do koszyka"><span>+</span> Dodaj</button></div></div>`;
+    article.innerHTML=`<div class="dish-visual">${photoMarkup}<span class="dish-index">${item.menuNumber}</span></div><div class="order-card-content"><h3>${item.name}</h3><p class="dish-description"><strong>Skład:</strong> ${item.description}</p>${variants}<div class="order-card-foot"><strong class="dish-price">${money(item.variants?.[0]?.[1]??item.price)}</strong><button class="add-to-cart" type="button" data-add="${item.id}" aria-label="Dodaj ${item.name} do koszyka"><span>+</span> Dodaj</button></div></div>`;
     orderGrid.append(article);
   });
 }
