@@ -79,36 +79,36 @@ lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox();});
 document.addEventListener('keydown',e=>{if(lightbox.hidden)return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1);});
 
 const ORDER_MENU = [
-  {id:'zupa-mala',name:'Zupa',category:'Zupy',price:10,image:'assets/dishes/bun.jpg',images:['assets/menu/zupa-mala.jpg','assets/menu/zupa-mala-2.jpg'],description:'Rozgrzewająca zupa w wybranym wariancie.',variants:[['Z krabem',10],['Z kurczakiem',10],['Miso',12]]},
-  {id:'frytki',name:'Frytki',category:'Przystawki',price:9,image:'image_1786957935929.jpg',description:'Frytki lub wybrany dodatek.',variants:[['Frytki',9],['Biały ryż',9],['Kluski',9],['Żółty ryż',9],['Smażony makaron',9]]},
-  {id:'dimsum',name:'Dimsum',category:'Przystawki',price:20,image:'image_1786957935932.jpg',description:'Delikatne pierożki dimsum — 5 szt.'},
-  {id:'sajgonki',name:'Sajgonki',category:'Przystawki',price:22,image:'assets/dishes/sajgonki.jpg',description:'Chrupiące sajgonki — 3 szt.',variants:[['Farsz mięsny',22],['Wegetariańskie',22]]},
-  {id:'springrolls',name:'Spring rolls wegetariańskie',category:'Przystawki',price:20,image:'assets/dishes/spring-rolls.jpg',description:'Świeże rolki wegetariańskie z sałatą.'},
-  {id:'springrolls-krewetki',name:'Spring rolls z krewetkami',category:'Przystawki',price:22,image:'assets/dishes/spring-rolls.jpg',description:'Świeże rolki z krewetkami i sałatą.'},
-  {id:'krewetki-panierowane',name:'Krewetki w chrupiącej panierce',category:'Przystawki',price:29,image:'image_1786957935933.jpg',description:'Panierowane krewetki podawane ze świeżą sałatą.'},
-  {id:'ser-smazony',name:'Smażony ser z frytkami',category:'Przystawki',price:29,image:'image_1786957935935.jpg',description:'Chrupiący ser podawany z frytkami i surówką.'},
-  {id:'kurczak-panierowany',name:'Chrupiąca panierowana pierś z kurczaka',category:'Dania główne',price:29,image:'image_1786957935937.jpg',description:'Panierowana pierś z kurczaka z dodatkami.'},
-  {id:'kungbao',name:'Kung Bao',category:'Dania główne',price:30,image:'assets/dishes/kung-bao.jpg',description:'Wyraziste danie z warzywami i orzeszkami.',variants:[['Kurczak',35],['Wołowina',39],['Krewetki',39],['Tofu',30]]},
+  {id:'zupa-mala',name:'Zupa',category:'Zupy',price:10,image:'assets/dishes/bun.jpg',images:['assets/menu/zupa-mala.jpg','assets/menu/zupa-mala-2.jpg'],description:'Mała zupa — wybierz kraba, kurczaka albo miso.',variantLabel:'Wybierz zupę',variants:[['Z krabem',10],['Z kurczakiem',10],['Miso',12]]},
+  {id:'frytki',name:'Frytki i dodatki',category:'Przystawki',price:9,image:'image_1786957935929.jpg',description:'Frytki, biały lub żółty ryż, kluski albo smażony makaron.',variantLabel:'Wybierz dodatek',variants:[['Frytki',9],['Biały ryż',9],['Kluski',9],['Żółty ryż',9],['Smażony makaron',9]]},
+  {id:'dimsum',name:'Dimsum',category:'Przystawki',price:20,image:'image_1786957935932.jpg',description:'Pierożki dimsum — 5 szt.'},
+  {id:'sajgonki',name:'Sajgonki',category:'Przystawki',price:22,image:'assets/dishes/sajgonki.jpg',description:'Chrupiące sajgonki — 3 szt.; farsz mięsny albo wegetariański.',variantLabel:'Wybierz farsz',variants:[['Farsz mięsny',22],['Wegetariańskie',22]]},
+  {id:'springrolls',name:'Spring rolls wegetariańskie',category:'Przystawki',price:20,image:'assets/dishes/spring-rolls.jpg',description:'Papier ryżowy, świeże warzywa i sałata.'},
+  {id:'springrolls-krewetki',name:'Spring rolls z krewetkami',category:'Przystawki',price:22,image:'assets/dishes/spring-rolls.jpg',description:'Papier ryżowy, krewetki, świeże warzywa i sałata.'},
+  {id:'krewetki-panierowane',name:'Krewetki w chrupiącej panierce',category:'Przystawki',price:29,image:'image_1786957935933.jpg',description:'Krewetki w chrupiącej panierce i świeża sałata.'},
+  {id:'ser-smazony',name:'Smażony ser z frytkami',category:'Przystawki',price:29,image:'image_1786957935935.jpg',description:'Smażony ser, frytki i surówka.'},
+  {id:'kurczak-panierowany',name:'Chrupiąca panierowana pierś z kurczaka',category:'Dania główne',price:29,image:'image_1786957935937.jpg',description:'Pierś z kurczaka w chrupiącej panierce, frytki i surówka.'},
+  {id:'kungbao',name:'Kung Bao',category:'Dania główne',price:30,image:'assets/dishes/kung-bao.jpg',description:'Warzywa, orzeszki ziemne i sos Kung Bao.',variantLabel:'Wybierz główny składnik',variants:[['Kurczak',35],['Wołowina',39],['Krewetki',39],['Tofu',30]]},
   {id:'wieprzowina-karmel',name:'Wieprzowina duszona w karmelu',category:'Dania główne',price:39,image:'image_1786957935938.jpg',description:'Delikatna wieprzowina w aromatycznym sosie karmelowym.'},
-  {id:'sos-tajski',name:'Danie w sosie tajskim',category:'Dania główne',price:30,image:'image_1786957935939.jpg',description:'Warzywa w aromatycznym sosie tajskim.',variants:[['Kurczak',35],['Wołowina',39],['Krewetki',39],['Tofu',30]]},
-  {id:'curry',name:'Curry',category:'Dania główne',price:30,image:'image_1786957935941.jpg',description:'Kremowe curry z warzywami i wybranym dodatkiem.',variants:[['Kurczak',35],['Wołowina',39],['Krewetki',39],['Tofu',30]]},
-  {id:'slodko-kwasny',name:'Sos słodko-kwaśny',category:'Dania główne',price:30,image:'image_1786957935932.jpg',description:'Klasyczny sos słodko-kwaśny z warzywami.',variants:[['Kurczak',35],['Wołowina',39],['Krewetki',39],['Tofu',30]]},
-  {id:'losos',name:'Łosoś',category:'Dania główne',price:49,image:'image_1786957935942.jpg',description:'Filet z łososia przygotowany w wybranym stylu.',variants:[['Sos teriyaki',49],['Masło i sos pomarańczowy',49],['Sos pieprzowy',49]]},
-  {id:'bone',name:'Bò Né',category:'Dania główne',price:45,image:'image_1786957935937.jpg',description:'Wołowina podawana na gorącym półmisku.'},
+  {id:'sos-tajski',name:'Danie w sosie tajskim',category:'Dania główne',price:30,image:'image_1786957935939.jpg',description:'Warzywa i aromatyczny sos tajski.',variantLabel:'Wybierz główny składnik',variants:[['Kurczak',35],['Wołowina',39],['Krewetki',39],['Tofu',30]]},
+  {id:'curry',name:'Curry',category:'Dania główne',price:30,image:'image_1786957935941.jpg',description:'Warzywa i kremowy sos curry.',variantLabel:'Wybierz główny składnik',variants:[['Kurczak',35],['Wołowina',39],['Krewetki',39],['Tofu',30]]},
+  {id:'slodko-kwasny',name:'Sos słodko-kwaśny',category:'Dania główne',price:30,image:'image_1786957935932.jpg',description:'Warzywa i sos słodko-kwaśny.',variantLabel:'Wybierz główny składnik',variants:[['Kurczak',35],['Wołowina',39],['Krewetki',39],['Tofu',30]]},
+  {id:'losos',name:'Łosoś',category:'Dania główne',price:49,image:'image_1786957935942.jpg',description:'Filet z łososia z wybranym sosem.',variantLabel:'Wybierz sos',variants:[['Sos teriyaki',49],['Masło i sos pomarańczowy',49],['Sos pieprzowy',49]]},
+  {id:'bone',name:'Bò Né',category:'Dania główne',price:45,image:'image_1786957935937.jpg',description:'Wołowina, jajko sadzone i warzywa; podawane z ryżem.'},
   {id:'udko-salatka',name:'Udko z kurczaka smażone z sałatką mieszaną',category:'Dania główne',price:39,image:'image_1786957935945.jpg',description:'Smażone udko z kurczaka ze świeżą sałatką mieszaną.'},
-  {id:'udko-smazone',name:'Udko z kurczaka smażone',category:'Dania główne',price:39,image:'image_1786957935937.jpg',description:'Chrupiące udko z kurczaka z wybranym sosem.',variants:[['Sos pieprzowy',39],['Sos tajski ostry',39],['Sos curry',39],['Sos słodko-kwaśny',39]]},
-  {id:'kaczka',name:'Smażona kaczka',category:'Dania główne',price:45,image:'assets/dishes/smazona-kaczka.jpg',description:'Chrupiąca kaczka podawana z wybranym sosem.',variants:[['Sos pieprzowy',45],['Sos tajski',45],['Sos curry',45],['Sos słodko-kwaśny',45]]},
+  {id:'udko-smazone',name:'Udko z kurczaka smażone',category:'Dania główne',price:39,image:'image_1786957935937.jpg',description:'Smażone udko z kurczaka, warzywa i wybrany sos.',variantLabel:'Wybierz sos',variants:[['Sos pieprzowy',39],['Sos tajski ostry',39],['Sos curry',39],['Sos słodko-kwaśny',39]]},
+  {id:'kaczka',name:'Smażona kaczka',category:'Dania główne',price:45,image:'assets/dishes/smazona-kaczka.jpg',description:'Smażona kaczka, warzywa i wybrany sos.',variantLabel:'Wybierz sos',variants:[['Sos pieprzowy',45],['Sos tajski',45],['Sos curry',45],['Sos słodko-kwaśny',45]]},
   {id:'kaczka-salatka',name:'Smażona kaczka z sałatką mieszaną',category:'Dania główne',price:45,image:'assets/dishes/smazona-kaczka.jpg',description:'Chrupiąca kaczka ze świeżą sałatką mieszaną.'},
-  {id:'ryz',name:'Smażony ryż',category:'Ryż i makarony',price:30,image:'assets/dishes/smazony-ryz.jpg',description:'Ryż smażony z jajkiem i warzywami.',variants:[['Kurczak',35],['Wołowina',39],['Krewetki',39],['Tofu',30]]},
-  {id:'makaron',name:'Smażony makaron',category:'Ryż i makarony',price:30,image:'assets/dishes/smazony-makaron.jpg',description:'Klasyczny makaron smażony z warzywami.',variants:[['Kurczak',35],['Wołowina',39],['Krewetki',39],['Tofu',30]]},
-  {id:'makaron-ryzowy',name:'Smażony makaron ryżowy',category:'Ryż i makarony',price:30,image:'image_1786957935948.jpg',description:'Makaron ryżowy smażony z warzywami.',variants:[['Kurczak',35],['Wołowina',39],['Krewetki',39],['Tofu',30]]},
-  {id:'padthai',name:'Pad Thai',category:'Ryż i makarony',price:30,image:'assets/dishes/pad-thai.jpg',description:'Makaron ryżowy z warzywami i orzeszkami.',variants:[['Kurczak',35],['Wołowina',39],['Krewetki',39],['Tofu',30]]},
-  {id:'udon',name:'Udon',category:'Ryż i makarony',price:35,image:'assets/dishes/udon.jpg',description:'Gruby makaron udon smażony z warzywami.',variants:[['Kurczak',39],['Wołowina',45],['Krewetki',45],['Tofu',35]]},
-  {id:'pho',name:'Zupa Phở',category:'Zupy',price:35,image:'assets/dishes/pho.jpg',description:'Aromatyczny bulion i makaron ryżowy.',variants:[['Kurczak',39],['Wołowina',42],['Krewetki',42],['Tofu',35]]},
-  {id:'bun',name:'Zupa Bún',category:'Zupy',price:35,image:'assets/dishes/bun.jpg',description:'Lekka zupa z makaronem ryżowym.',variants:[['Kurczak',39],['Wołowina',42],['Krewetki',42],['Tofu',35]]},
+  {id:'ryz',name:'Smażony ryż',category:'Ryż i makarony',price:30,image:'assets/dishes/smazony-ryz.jpg',description:'Ryż smażony z jajkiem i warzywami.',variantLabel:'Wybierz główny składnik',variants:[['Kurczak',35],['Wołowina',39],['Krewetki',39],['Tofu',30]]},
+  {id:'makaron',name:'Smażony makaron',category:'Ryż i makarony',price:30,image:'assets/dishes/smazony-makaron.jpg',description:'Makaron smażony z warzywami.',variantLabel:'Wybierz główny składnik',variants:[['Kurczak',35],['Wołowina',39],['Krewetki',39],['Tofu',30]]},
+  {id:'makaron-ryzowy',name:'Smażony makaron ryżowy',category:'Ryż i makarony',price:30,image:'image_1786957935948.jpg',description:'Makaron ryżowy smażony z warzywami.',variantLabel:'Wybierz główny składnik',variants:[['Kurczak',35],['Wołowina',39],['Krewetki',39],['Tofu',30]]},
+  {id:'padthai',name:'Pad Thai',category:'Ryż i makarony',price:30,image:'assets/dishes/pad-thai.jpg',description:'Makaron ryżowy, warzywa i orzeszki ziemne.',variantLabel:'Wybierz główny składnik',variants:[['Kurczak',35],['Wołowina',39],['Krewetki',39],['Tofu',30]]},
+  {id:'udon',name:'Udon',category:'Ryż i makarony',price:35,image:'assets/dishes/udon.jpg',description:'Gruby makaron udon smażony z warzywami.',variantLabel:'Wybierz główny składnik',variants:[['Kurczak',39],['Wołowina',45],['Krewetki',45],['Tofu',35]]},
+  {id:'pho',name:'Zupa Phở',category:'Zupy',price:35,image:'assets/dishes/pho.jpg',description:'Aromatyczny bulion, makaron ryżowy, zioła i warzywa.',variantLabel:'Wybierz główny składnik',variants:[['Kurczak',39],['Wołowina',42],['Krewetki',42],['Tofu',35]]},
+  {id:'bun',name:'Zupa Bún',category:'Zupy',price:35,image:'assets/dishes/bun.jpg',description:'Lekki bulion, makaron ryżowy, zioła i warzywa.',variantLabel:'Wybierz główny składnik',variants:[['Kurczak',39],['Wołowina',42],['Krewetki',42],['Tofu',35]]},
   {id:'pho-kurczak-sos',name:'Phở z kurczakiem na sucho',category:'Zupy',price:42,image:'assets/dishes/pho.jpg',description:'Makaron phở z kurczakiem i aromatycznym sosem.'},
   {id:'bunbo',name:'Bún bò Nam Bộ',category:'Dania główne',price:42,image:'assets/dishes/bun-bo-nam-bo.jpg',description:'Wołowina, makaron ryżowy, zioła, warzywa i orzeszki.'},
-  {id:'bunnemran',name:'Bún nem rán',category:'Dania główne',price:39,image:'assets/dishes/sajgonki.jpg',description:'Makaron bún z sajgonkami i świeżymi dodatkami.',variants:[['Farsz mięsny',39],['Wegetariańskie',39]]},
+  {id:'bunnemran',name:'Bún nem rán',category:'Dania główne',price:39,image:'assets/dishes/sajgonki.jpg',description:'Makaron bún, sajgonki, świeże warzywa i zioła.',variantLabel:'Wybierz farsz sajgonek',variants:[['Farsz mięsny',39],['Wegetariańskie',39]]},
   {id:'buncha',name:'Bún chả',category:'Dania główne',price:39,image:'assets/dishes/bun-cha.jpg',description:'Grillowana wieprzowina, makaron ryżowy, zioła i sos.'},
   {id:'krab-tamaryndowy',name:'Krab w sosie tamaryndowym',category:'Dania główne',price:45,image:'image_1786957935946.jpg',description:'Krab w intensywnym, słodko-kwaśnym sosie tamaryndowym.'},
   {id:'s1',name:'Nigiri łosoś',category:'Sushi',price:20,image:'assets/sushi/nigiri-salmon.jpg',description:'Nigiri z łososiem — 2 szt.'},
@@ -128,7 +128,7 @@ const ORDER_MENU = [
   {id:'s15',name:'Futomaki smażone krewetki',category:'Sushi',price:35,image:'assets/sushi/shrimp.jpg',description:'Futomaki ze smażonymi krewetkami — 8 szt.'},
   {id:'s16',name:'Futomaki krab miękki',category:'Sushi',price:39,image:'assets/sushi/shrimp.jpg',description:'Miękki krab, ryż i nori — 8 szt.'},
   {id:'s17',name:'Futomaki pierś z kurczaka',category:'Sushi',price:32,image:'assets/sushi/futomaki-salmon.jpg',description:'Pierś z kurczaka, warzywa, ryż i nori — 8 szt.'},
-  {id:'s18',name:'Futomaki smażony łosoś',category:'Sushi',price:39,image:'assets/sushi/futomaki-salmon.jpg',description:'Smażony łosoś, warzywa, ryż i nori — 8 szt.'},
+  {id:'s18',name:'Futomaki smażony łosoś',category:'Sushi',price:30,image:'assets/sushi/futomaki-salmon.jpg',description:'Smażony łosoś, warzywa, ryż i nori — 8 szt.'},
   {id:'s19',name:'Futomaki paluszki krabowe MIX',category:'Sushi',price:30,image:'assets/sushi/uramaki.jpg',description:'Paluszki krabowe, warzywa, ryż i nori — 8 szt.'},
   {id:'s20',name:'Futomaki tofu',category:'Sushi',price:25,image:'assets/sushi/uramaki.jpg',description:'Wegetariańskie futomaki z tofu — 8 szt.'},
   {id:'s21',name:'Uramaki łosoś',category:'Sushi',price:29,image:'assets/sushi/uramaki.jpg',description:'Uramaki z łososiem — 8 szt.'},
@@ -174,11 +174,12 @@ realDishPhotoIds.forEach(id => {
   const item = ORDER_MENU.find(dish => dish.id === id);
   if (item) item.image = `assets/menu/${id}.jpg`;
 });
+// Asian dish 18 (Udko z kurczaka smażone) stays at 39 zł; sushi S18 is 30 zł.
 // Keep corrected menu photos with their matching dishes (S17/S18 were named in reverse; S35 has balanced exposure).
 const correctedDishPhotos = {
   s17: 'assets/menu/s18.jpg',
   s18: 'assets/menu/s17.jpg',
-  s35: 'assets/menu/s35-balanced.png'
+  s35: 'assets/menu/s35-balanced.jpg'
 };
 Object.entries(correctedDishPhotos).forEach(([dishId, photoPath]) => {
   const item = ORDER_MENU.find(dish => dish.id === dishId);
@@ -216,7 +217,8 @@ function renderMenu(){
   orderGrid.innerHTML='';
   ORDER_MENU.filter(item=>activeCategory==='Wszystkie'||item.category===activeCategory).forEach((item,index)=>{
     const article=document.createElement('article'); article.className='order-card menu-enter'; article.dataset.dishId=item.id; article.style.setProperty('--enter-delay',`${Math.min(index,7)*55}ms`);
-    const variants=item.variants?`<label class="variant-picker"><span>Wybierz wariant</span><select aria-label="Wariant ${item.name}">${item.variants.map(([name,price],variantIndex)=>`<option value="${variantIndex}" data-price="${price}">${name} · ${money(price)}</option>`).join('')}</select></label>`:'<div class="variant-placeholder" aria-hidden="true"></div>';
+    const variantLabel=item.variantLabel??'Wybierz wariant';
+    const variants=item.variants?`<label class="variant-picker"><span>${variantLabel}</span><select aria-label="${variantLabel}: ${item.name}">${item.variants.map(([name,price],variantIndex)=>`<option value="${variantIndex}" data-price="${price}">${name} · ${money(price)}</option>`).join('')}</select></label>`:'<div class="variant-placeholder" aria-hidden="true"></div>';
     const photos=item.images??[item.image];
     const photoMarkup=photos.length>1?`<div class="dish-image-pair">${photos.map((src,photoIndex)=>`<img src="${src}" alt="${item.name} — zdjęcie ${photoIndex+1}" loading="lazy">`).join('')}</div>`:`<img src="${item.image}" alt="${item.name}" loading="lazy">`;
     article.innerHTML=`<div class="dish-visual">${photoMarkup}<span class="dish-index">${item.menuNumber}</span></div><div class="order-card-content"><h3>${item.name}</h3><p class="dish-description"><strong>Skład:</strong> ${item.description}</p>${variants}<div class="order-card-foot"><strong class="dish-price">${money(item.variants?.[0]?.[1]??item.price)}</strong><button class="add-to-cart" type="button" data-add="${item.id}" aria-label="Dodaj ${item.name} do koszyka"><span>+</span> Dodaj</button></div></div>`;
