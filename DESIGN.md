@@ -117,7 +117,7 @@ components:
 
 **Creative North Star: "Warm charcoal, food first"**
 
-This name describes the implemented direction; it is not an additional user-approved concept. Warm dark surfaces, generous food photography and direct gold actions present Hà Nội Quán. Burgundy anchors the closing order region. The retained restaurant logo carries the existing identity.
+This name describes the implemented direction; it is not an additional user-approved concept. Warm dark surfaces, generous food photography and direct gold actions present Hà Nội Quán. Raised warm charcoal anchors the closing order region. The retained restaurant logo carries the existing identity.
 
 Text and navigation are restrained, while dish names use a compact condensed face. Tonal section changes connect browsing, restaurant information and checkout. This record was extracted from the final CSS cascade, HTML and menu renderer after a code-led refinement. Earlier light stylesheet declarations are superseded.
 
@@ -139,7 +139,7 @@ Warm neutrals support gold actions and deeper burgundy regions. The frontmatter 
 
 ### Secondary
 
-- **Burgundy (`red`, `red-dark`)** supports the identity and closes the page with a dark red order band. It also appears in retained cart interactions.
+- **Burgundy (`red`, `red-dark`)** remains in retained cart interactions. The closing order band uses raised charcoal (`paper-2`), keeping its gold action consistent with the rest of the page.
 
 ### Neutral
 

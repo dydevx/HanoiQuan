@@ -493,7 +493,7 @@ h2 { font: 700 clamp(36px, 3.7vw, 52px)/1.12 var(--body); letter-spacing: -.03em
 .status-badge { text-transform: none; }
 .contact iframe { min-height: 0; height: 460px; box-shadow: none; border-radius: 12px; filter: none; }
 .footer { background: var(--paper); }
-.footer-order { background: var(--red-dark); }
+.footer-order { background: var(--paper-2); }
 .footer-order-inner { min-height: 0; display: flex; align-items: center; justify-content: space-between; gap: 32px; padding-block: 48px; }
 .footer-order-inner > p { display: none; }
 .footer-order h2 { margin: 0; font-size: clamp(30px, 3.5vw, 46px); line-height: 1.12; }
