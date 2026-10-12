@@ -1,0 +1,22 @@
+{
+  "tool": "Built-in image_gen.imagegen",
+  "deliveryDerivatives": {
+    "assets/hero-sushi.webp": "WebP delivery copy of hero-sushi.png, 1536px wide, quality 86.",
+    "assets/hero-sushi-mobile.webp": "WebP delivery copy of hero-sushi.png, 960px wide, quality 82.",
+    "assets/hero-sushi-wasabi-bowl.webp": "Current hero WebP with wasabi in a tiny ceramic bowl, 1536px wide, quality 86. Edit provenance in assets/sushi-edited/wasabi-bowls.json (hero record).",
+    "assets/hero-sushi-wasabi-bowl-mobile.webp": "Current mobile hero WebP with wasabi in a tiny ceramic bowl, 960px wide, quality 82.",
+    "assets/sushi-accompaniments.webp": "Historical WebP copy of sushi-accompaniments.png, preserved alpha. Superseded by integrated sushi photographs; no longer rendered.",
+    "assets/sushi-edited/s*-natural.webp": "40 individually edited restaurant photographs, 800×600 WebP, quality 86. Per-dish originals, exact edit prompts and framing refinements are recorded in assets/sushi-edited/manifest.json.",
+    "assets/sushi-edited/s*-wasabi-bowl.webp": "Current delivery copies for all 40 dishes, 800×600 WebP, quality 86. Wasabi is served in a tiny ceramic bowl. 37 targeted photo edits; existing bowls retained in S32, S33 and S40. Exact prompts in assets/sushi-edited/wasabi-bowls.json; per-dish delivery mapping in manifest.json.",
+    "assets/logo.webp": "288px WebP delivery copy of existing logo.png. Brand artwork preserved.",
+    "assets/web/menu/*.webp": "800px wide WebP delivery copies of matching existing assets/menu/*.jpg, preserving aspect ratio and dish contents. Corrected S17/S18 photo mapping remains in js/main.js."
+  },
+  "hero-sushi.png": {
+    "source": "Existing restaurant photo assets/menu/s39.jpg",
+    "prompt": "Use case: compositing. Edit the supplied actual restaurant sushi photograph into a wide 16:9 restaurant website hero photo. Preserve the existing sushi assortment, types, proportions and every sushi piece, do not invent extra sushi. Place the original assortment on a matte charcoal rectangular ceramic serving platter across the right two-thirds. Add realistic modest accompaniments: pink pickled ginger, a small mound of wasabi, a small bowl of green wakame seaweed salad and a black dipping dish of soy sauce beside the sushi. Background is a dark warm charcoal restaurant table with softly lit food, natural appetizing professional food photography. Leave left third spacious dark negative space for website copy. No text, logos, decorative smoke, chopstick clutter, borders or watermark. Output image for the local website project; save available file."
+  },
+  "sushi-accompaniments.png": {
+    "source": "Historical transparent accompaniment arrangement previously composed in CSS. Replaced by individual integrated edits for all 40 sushi dishes; original sushi photographs remain intact.",
+    "prompt": "Use case: product-mockup. Website food photography asset, transparent background. A compact horizontal row of four realistic tiny sushi accompaniments in a single arrangement: pale pink pickled ginger on a tiny dark ceramic saucer on the left, a small green wasabi mound, a small black ceramic bowl of bright green wakame seaweed salad sprinkled with sesame, and a small shallow black ceramic dish filled with dark soy sauce on the right. Professional realistic close-up food photo, camera 45 degrees down matching sushi catalog photography. Entire objects visible with ample transparent margin, no table, no sushi, no background, no text, no labels, no chopsticks, no logos. Objects sit on the same baseline; warm neutral soft lighting, no exaggerated shadows. Must have genuinely transparent alpha around all four objects. Wide horizontal composition about 3:1 with tightly bounded objects."
+  }
+}

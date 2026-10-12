@@ -1,0 +1,418 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-12T05:00:21.589275+00:00",
+  "title": "Design System: Hà Nội Quán",
+  "extensions": {
+    "colorMeta": {
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0039 48.49)",
+          "oklch(26% 0.0039 48.49)",
+          "oklch(37% 0.0039 48.49)",
+          "oklch(48% 0.0039 48.49)",
+          "oklch(60% 0.0039 48.49)",
+          "oklch(72% 0.0039 48.49)",
+          "oklch(84% 0.0039 48.49)",
+          "oklch(95% 0.0039 48.49)"
+        ],
+        "rampPurpose": "Synthesized preview ramp, not shipping palette additions."
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0051 67.53)",
+          "oklch(26% 0.0051 67.53)",
+          "oklch(37% 0.0051 67.53)",
+          "oklch(48% 0.0051 67.53)",
+          "oklch(60% 0.0051 67.53)",
+          "oklch(72% 0.0051 67.53)",
+          "oklch(84% 0.0051 67.53)",
+          "oklch(95% 0.0051 67.53)"
+        ],
+        "rampPurpose": "Synthesized preview ramp, not shipping palette additions."
+      },
+      "paper-2": {
+        "role": "neutral",
+        "displayName": "Paper 2",
+        "tonalRamp": [
+          "oklch(15% 0.0073 67.47)",
+          "oklch(26% 0.0073 67.47)",
+          "oklch(37% 0.0073 67.47)",
+          "oklch(48% 0.0073 67.47)",
+          "oklch(60% 0.0073 67.47)",
+          "oklch(72% 0.0073 67.47)",
+          "oklch(84% 0.0073 67.47)",
+          "oklch(95% 0.0073 67.47)"
+        ],
+        "rampPurpose": "Synthesized preview ramp, not shipping palette additions."
+      },
+      "red": {
+        "role": "secondary",
+        "displayName": "Red",
+        "tonalRamp": [
+          "oklch(15% 0.1373 28.12)",
+          "oklch(26% 0.1373 28.12)",
+          "oklch(37% 0.1373 28.12)",
+          "oklch(48% 0.1373 28.12)",
+          "oklch(60% 0.1373 28.12)",
+          "oklch(72% 0.1373 28.12)",
+          "oklch(84% 0.1373 28.12)",
+          "oklch(95% 0.1373 28.12)"
+        ],
+        "rampPurpose": "Synthesized preview ramp, not shipping palette additions."
+      },
+      "red-dark": {
+        "role": "secondary",
+        "displayName": "Red Dark",
+        "tonalRamp": [
+          "oklch(15% 0.1113 27.53)",
+          "oklch(26% 0.1113 27.53)",
+          "oklch(37% 0.1113 27.53)",
+          "oklch(48% 0.1113 27.53)",
+          "oklch(60% 0.1113 27.53)",
+          "oklch(72% 0.1113 27.53)",
+          "oklch(84% 0.1113 27.53)",
+          "oklch(95% 0.1113 27.53)"
+        ],
+        "rampPurpose": "Synthesized preview ramp, not shipping palette additions."
+      },
+      "gold": {
+        "role": "primary",
+        "displayName": "Gold",
+        "tonalRamp": [
+          "oklch(15% 0.1247 77.73)",
+          "oklch(26% 0.1247 77.73)",
+          "oklch(37% 0.1247 77.73)",
+          "oklch(48% 0.1247 77.73)",
+          "oklch(60% 0.1247 77.73)",
+          "oklch(72% 0.1247 77.73)",
+          "oklch(84% 0.1247 77.73)",
+          "oklch(95% 0.1247 77.73)"
+        ],
+        "rampPurpose": "Synthesized preview ramp, not shipping palette additions."
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted",
+        "tonalRamp": [
+          "oklch(15% 0.0156 70.84)",
+          "oklch(26% 0.0156 70.84)",
+          "oklch(37% 0.0156 70.84)",
+          "oklch(48% 0.0156 70.84)",
+          "oklch(60% 0.0156 70.84)",
+          "oklch(72% 0.0156 70.84)",
+          "oklch(84% 0.0156 70.84)",
+          "oklch(95% 0.0156 70.84)"
+        ],
+        "rampPurpose": "Synthesized preview ramp, not shipping palette additions."
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Line",
+        "tonalRamp": [
+          "oklch(15% 0.0174 67.24)",
+          "oklch(26% 0.0174 67.24)",
+          "oklch(37% 0.0174 67.24)",
+          "oklch(48% 0.0174 67.24)",
+          "oklch(60% 0.0174 67.24)",
+          "oklch(72% 0.0174 67.24)",
+          "oklch(84% 0.0174 67.24)",
+          "oklch(95% 0.0174 67.24)"
+        ],
+        "rampPurpose": "Synthesized preview ramp, not shipping palette additions."
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "White",
+        "tonalRamp": [
+          "oklch(15% 0.0074 80.72)",
+          "oklch(26% 0.0074 80.72)",
+          "oklch(37% 0.0074 80.72)",
+          "oklch(48% 0.0074 80.72)",
+          "oklch(60% 0.0074 80.72)",
+          "oklch(72% 0.0074 80.72)",
+          "oklch(84% 0.0074 80.72)",
+          "oklch(95% 0.0074 80.72)"
+        ],
+        "rampPurpose": "Synthesized preview ramp, not shipping palette additions."
+      },
+      "gold-hover": {
+        "role": "primary",
+        "displayName": "Gold Hover",
+        "tonalRamp": [
+          "oklch(15% 0.0960 78.26)",
+          "oklch(26% 0.0960 78.26)",
+          "oklch(37% 0.0960 78.26)",
+          "oklch(48% 0.0960 78.26)",
+          "oklch(60% 0.0960 78.26)",
+          "oklch(72% 0.0960 78.26)",
+          "oklch(84% 0.0960 78.26)",
+          "oklch(95% 0.0960 78.26)"
+        ],
+        "rampPurpose": "Synthesized preview ramp, not shipping palette additions."
+      },
+      "selection-surface": {
+        "role": "neutral",
+        "displayName": "Selection Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0292 57.62)",
+          "oklch(26% 0.0292 57.62)",
+          "oklch(37% 0.0292 57.62)",
+          "oklch(48% 0.0292 57.62)",
+          "oklch(60% 0.0292 57.62)",
+          "oklch(72% 0.0292 57.62)",
+          "oklch(84% 0.0292 57.62)",
+          "oklch(95% 0.0292 57.62)"
+        ],
+        "rampPurpose": "Synthesized preview ramp, not shipping palette additions."
+      },
+      "action-surface": {
+        "role": "neutral",
+        "displayName": "Action Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0316 54.11)",
+          "oklch(26% 0.0316 54.11)",
+          "oklch(37% 0.0316 54.11)",
+          "oklch(48% 0.0316 54.11)",
+          "oklch(60% 0.0316 54.11)",
+          "oklch(72% 0.0316 54.11)",
+          "oklch(84% 0.0316 54.11)",
+          "oklch(95% 0.0316 54.11)"
+        ],
+        "rampPurpose": "Synthesized preview ramp, not shipping palette additions."
+      },
+      "field-border": {
+        "role": "neutral",
+        "displayName": "Field Border",
+        "tonalRamp": [
+          "oklch(15% 0.0328 68.72)",
+          "oklch(26% 0.0328 68.72)",
+          "oklch(37% 0.0328 68.72)",
+          "oklch(48% 0.0328 68.72)",
+          "oklch(60% 0.0328 68.72)",
+          "oklch(72% 0.0328 68.72)",
+          "oklch(84% 0.0328 68.72)",
+          "oklch(95% 0.0328 68.72)"
+        ],
+        "rampPurpose": "Synthesized preview ramp, not shipping palette additions."
+      },
+      "photo-ground": {
+        "role": "neutral",
+        "displayName": "Photo Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0058 84.57)",
+          "oklch(26% 0.0058 84.57)",
+          "oklch(37% 0.0058 84.57)",
+          "oklch(48% 0.0058 84.57)",
+          "oklch(60% 0.0058 84.57)",
+          "oklch(72% 0.0058 84.57)",
+          "oklch(84% 0.0058 84.57)",
+          "oklch(95% 0.0058 84.57)"
+        ],
+        "rampPurpose": "Synthesized preview ramp, not shipping palette additions."
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Hero statement",
+        "purpose": "Manrope hero; source --display instead names Barlow Condensed."
+      },
+      "title": {
+        "displayName": "Dish identity",
+        "purpose": "Barlow Condensed compact headings."
+      }
+    },
+    "shadows": [
+      {
+        "name": "header-scrolled",
+        "value": "0 8px 24px rgb(0 0 0 / 20%)",
+        "purpose": "Scrolled sticky header."
+      },
+      {
+        "name": "drawer",
+        "value": "-20px 0 60px rgba(0,0,0,.25)",
+        "purpose": "Checkout overlay."
+      },
+      {
+        "name": "floating-cart",
+        "value": "0 10px 30px rgba(0,0,0,.25)",
+        "purpose": "Mobile action."
+      }
+    ],
+    "motion": [
+      {
+        "name": "hero-entry",
+        "value": ".65s cubic-bezier(.22,1,.36,1)",
+        "purpose": "Opacity and 14px rise; no-preference only."
+      },
+      {
+        "name": "state",
+        "value": ".2s",
+        "purpose": "Control color/background changes."
+      },
+      {
+        "name": "drawer",
+        "value": ".38s cubic-bezier(.22,1,.36,1)",
+        "purpose": "Drawer translation."
+      },
+      {
+        "name": "progress",
+        "value": "animation-timeline: scroll(root)",
+        "purpose": "2px scroll line when supported."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation-duration: .01ms; transition-duration: .01ms; scroll-behavior: auto",
+        "purpose": "Content stays visible."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "cart-collapse",
+        "value": "1120px"
+      },
+      {
+        "name": "mobile-navigation",
+        "value": "780px"
+      },
+      {
+        "name": "single-card",
+        "value": "520px"
+      },
+      {
+        "name": "retained-narrow-adjustments",
+        "value": "430px"
+      }
+    ],
+    "focus": [
+      {
+        "name": "global",
+        "value": "3px solid #f0b83d; outline-offset: 3px",
+        "purpose": "Visible keyboard focus."
+      },
+      {
+        "name": "field-inherited",
+        "value": "border-color: var(--red); outline: 0; box-shadow: 0 0 0 3px rgba(183,36,31,.12)",
+        "purpose": "Current code only; not promoted into an independently approved focus replacement."
+      }
+    ],
+    "sources": [
+      "css/style.css",
+      "index.html",
+      "js/main.js",
+      "assets/fonts/fonts.css",
+      "assets/image-prompts.json"
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "description": "Order or original menu action, extracted from current CSS.",
+      "html": "<button class=\"ds-button-primary\">Zamów online</button>",
+      "css": ".ds-button-primary{font-family:var(--body,\"Manrope\",sans-serif);min-height:48px;padding:12px 24px;border:1px solid var(--gold,#edb65c);border-radius:8px;background:var(--gold,#edb65c);color:var(--ink,#12100f);font-size:13px;font-weight:800;cursor:pointer;transition:background .2s}.ds-button-primary:hover{background:#f5cb89}.ds-button-primary:focus-visible{outline:3px solid #f0b83d;outline-offset:3px}",
+      "refersTo": "button-primary"
+    },
+    {
+      "name": "Outline action",
+      "kind": "button",
+      "description": "Order or original menu action, extracted from current CSS.",
+      "html": "<button class=\"ds-button-outline\">Pełne menu</button>",
+      "css": ".ds-button-outline{font-family:var(--body,\"Manrope\",sans-serif);min-height:48px;padding:12px 24px;border:1px solid #b9a48d;border-radius:8px;background:rgb(20 16 13 / 45%);color:var(--white,#faf7f2);font-size:13px;font-weight:800;cursor:pointer;transition:background .2s}.ds-button-outline:hover{background:var(--paper-2,#211e1b)}.ds-button-outline:focus-visible{outline:3px solid #f0b83d;outline-offset:3px}",
+      "refersTo": "button-outline"
+    },
+    {
+      "name": "Add action",
+      "kind": "button",
+      "description": "Brown resting action turns gold on hover or success.",
+      "html": "<button class=\"ds-add\">Dodaj</button>",
+      "css": ".ds-add{font-family:var(--body,\"Manrope\",sans-serif);min-height:44px;padding:10px 14px;border:1px solid #705139;border-radius:8px;background:#3c2b20;color:var(--gold,#edb65c);font-size:12px;font-weight:800;cursor:pointer;transition:background .2s}.ds-add:hover,.ds-add.ds-added{background:var(--gold,#edb65c);color:var(--ink,#12100f)}.ds-add:focus-visible{outline:3px solid #f0b83d;outline-offset:3px}",
+      "refersTo": "button-add"
+    },
+    {
+      "name": "Checkout field",
+      "kind": "input",
+      "description": "Current native field with inherited source focus; that focus is descriptive evidence, not a new approved preferred pattern.",
+      "html": "<label class=\"ds-label\">Imię i nazwisko<input class=\"ds-field\" autocomplete=\"name\"></label>",
+      "css": ".ds-label{font-family:var(--body,\"Manrope\",sans-serif);display:block;color:var(--white,#faf7f2);font-size:12px;font-weight:800}.ds-field{font-family:var(--body,\"Manrope\",sans-serif);display:block;width:100%;margin-top:7px;padding:12px 13px;border:1px solid #786857;border-radius:8px;background:var(--paper,#171513);color:var(--white,#faf7f2);caret-color:var(--gold,#edb65c);transition:border-color .2s,box-shadow .2s}.ds-field:focus{border-color:var(--red,#8e2922);outline:0;box-shadow:0 0 0 3px rgba(183,36,31,.12)}",
+      "refersTo": "field"
+    },
+    {
+      "name": "Variant select",
+      "kind": "input",
+      "description": "Native dish variant with price.",
+      "html": "<label class=\"ds-variant\">Wybierz główny składnik<select class=\"ds-select\"><option>Wołowina · 39,00 zł</option><option>Tofu · 30,00 zł</option></select></label>",
+      "css": ".ds-variant{font-family:var(--body,\"Manrope\",sans-serif);display:block;color:#d7cfc6;font-size:11px}.ds-select{font-family:var(--body,\"Manrope\",sans-serif);width:100%;min-height:44px;margin-top:7px;padding:9px 34px 9px 10px;border:1px solid #786857;border-radius:8px;background:var(--paper,#171513);color:var(--white,#faf7f2);font-size:12px;font-weight:700;cursor:pointer}.ds-select:focus-visible{outline:3px solid #f0b83d;outline-offset:3px}",
+      "refersTo": "field"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "description": "Normal-case header links; preview adds canvas padding.",
+      "html": "<nav class=\"ds-nav\" aria-label=\"Główna nawigacja\"><a href=\"#zamow\">Zamów online</a><a href=\"#onas\">O nas</a><a href=\"#kontakt\">Kontakt</a></nav>",
+      "css": ".ds-nav{font-family:var(--body,\"Manrope\",sans-serif);display:flex;flex-wrap:wrap;gap:32px;padding:18px;background:var(--paper,#171513);color:var(--white,#faf7f2)}.ds-nav a{display:inline-flex;align-items:center;min-height:44px;text-decoration:none;color:inherit;font-size:13px;font-weight:600}.ds-nav a:hover{color:var(--gold,#edb65c)}.ds-nav a:focus-visible{outline:3px solid #f0b83d;outline-offset:3px}"
+    },
+    {
+      "name": "Category state",
+      "kind": "custom",
+      "description": "Selected textual category state; thumbnail omitted from isolated primitive preview.",
+      "html": "<button class=\"ds-category\" aria-pressed=\"true\"><span>Sushi</span><small>33 pozycji</small></button>",
+      "css": ".ds-category{font-family:var(--body,\"Manrope\",sans-serif);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;min-width:118px;min-height:142px;padding:15px 8px 12px;border:1px solid var(--gold,#edb65c);border-radius:12px;background:#3a2b20;color:var(--gold,#edb65c);font-size:12px;font-weight:800;line-height:1.4;cursor:pointer;transition:color .2s,background .2s}.ds-category small{color:var(--muted,#bbb3aa);font-size:11px;font-weight:400}.ds-category:hover{border-color:var(--gold,#edb65c)}.ds-category:focus-visible{outline:3px solid #f0b83d;outline-offset:3px}",
+      "refersTo": "category"
+    },
+    {
+      "name": "Dish card body",
+      "kind": "card",
+      "description": "Text body of existing card; photograph omitted from the primitive preview.",
+      "html": "<article class=\"ds-card\"><div class=\"ds-title\"><span>10</span><h3>Kung Bao</h3></div><p>Warzywa, orzeszki ziemne i sos Kung Bao. Na zdjęciu: wołowina.</p><div class=\"ds-foot\"><strong>39,00 zł</strong><button>Dodaj</button></div></article>",
+      "css": ".ds-card{font-family:var(--body,\"Manrope\",sans-serif);max-width:420px;border-radius:12px;padding:22px;background:var(--paper-2,#211e1b);color:var(--white,#faf7f2)}.ds-title{display:flex;align-items:baseline;gap:10px;margin-bottom:10px}.ds-title span{color:var(--gold,#edb65c);font:700 16px/1 var(--display,\"Barlow Condensed\",sans-serif)}.ds-title h3{margin:0;font:700 26px/1.12 var(--display,\"Barlow Condensed\",sans-serif)}.ds-card p{margin:0;color:var(--muted,#bbb3aa);font-size:13px;line-height:1.7}.ds-foot{display:flex;justify-content:space-between;align-items:center;gap:8px;padding-top:24px}.ds-foot strong{color:var(--gold,#edb65c);font-size:19px;font-weight:800;font-variant-numeric:tabular-nums}.ds-foot button{font-family:var(--body,\"Manrope\",sans-serif);min-height:44px;padding:10px 14px;border:1px solid #705139;border-radius:8px;background:#3c2b20;color:var(--gold,#edb65c);font-size:12px;font-weight:800;cursor:pointer;transition:background .2s}.ds-foot button:hover{background:var(--gold,#edb65c);color:var(--ink,#12100f)}.ds-foot button:focus-visible{outline:3px solid #f0b83d;outline-offset:3px}",
+      "refersTo": "menu-card"
+    }
+  ],
+  "narrative": {
+    "northStar": "Warm charcoal, food first",
+    "overview": "This name describes the implemented direction; it is not an additional user-approved concept. Warm dark surfaces, generous food photography and direct gold actions present Hà Nội Quán. Burgundy anchors the closing order region. The retained restaurant logo carries the existing identity.\n\nText and navigation are restrained, while dish names use a compact condensed face. Tonal section changes connect browsing, restaurant information and checkout. This record was extracted from the final CSS cascade, HTML and menu renderer after a code-led refinement. Earlier light stylesheet declarations are superseded.",
+    "keyCharacteristics": [
+      "Warm charcoal backgrounds with slightly lighter containers.",
+      "Gold for actions, prices and selection; burgundy for supporting regions.",
+      "Manrope reading and headlines paired with Barlow Condensed dish headings.",
+      "Rounded photo surfaces, native controls and visible keyboard focus.",
+      "Dish photographs and explicit serving suggestions take priority over decoration."
+    ],
+    "rules": [
+      {
+        "name": "Action Gold",
+        "body": "Use gold consistently for ordering, prices and selected states; keep long descriptive text neutral.",
+        "section": "colors"
+      },
+      {
+        "name": "Two Voices",
+        "body": "Use Manrope for reading and broad statements, and Barlow Condensed for dish identity and compact menu headings.",
+        "section": "typography"
+      },
+      {
+        "name": "Tonal Surface",
+        "body": "Separate resting content through charcoal tone and spacing; reserve broad shadows for overlays and scrolled navigation.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** preserve the original logo and Vietnamese diacritics.",
+      "**Do** connect page sections and checkout with warm charcoal tones.",
+      "**Do** pair gold actions and prices with neutral descriptive text.",
+      "**Do** frame Asian dishes around the complete serving and use full 4:3 sushi photographs with integrated accompaniments.",
+      "**Do** retain serving-suggestion copy and raster provenance.",
+      "**Do** keep focus visible, controls comfortably tappable and reduced motion supported."
+    ],
+    "donts": [
+      "**Don't** infer the current palette from superseded light stylesheet declarations.",
+      "**Don't** turn catalog images into cropped decorative backgrounds.",
+      "**Don't** replace the original logo with a generated identity.",
+      "**Don't** add decorative gold frames throughout the interface.",
+      "**Don't** hide essential menu content behind entrance animations."
+    ]
+  }
+}
