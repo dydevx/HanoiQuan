@@ -269,13 +269,14 @@ function renderCategories(){
     const button=document.createElement('button');
     button.type='button'; button.className='category-tab'+(category===activeCategory?' active':'');
     const categoryPhotos = {
-      Wszystkie:'assets/menu/bunbo.jpg', Zupy:'assets/menu/pho.jpg',
-      Przystawki:'assets/menu/sajgonki.jpg', 'Dania główne':'assets/menu/kungbao.jpg',
-      'Ryż i makarony':'assets/menu/padthai.jpg', Sushi:'assets/sushi-edited/s13-wasabi-bowl.webp',
-      'Sushi Set':'assets/sushi-edited/s39-wasabi-bowl.webp'
+      Wszystkie:'assets/web/categories/all.webp', Zupy:'assets/web/categories/soups.webp',
+      Przystawki:'assets/web/categories/starters.webp', 'Dania główne':'assets/web/categories/mains.webp',
+      'Ryż i makarony':'assets/web/categories/noodles.webp', Sushi:'assets/web/categories/sushi.webp',
+      'Sushi Set':'assets/web/categories/sets.webp'
     };
     const count = ORDER_MENU.filter(item=>category==='Wszystkie'||item.category===category).length;
-    button.innerHTML=`<img src="${menuWebPhoto(categoryPhotos[category])}" alt="" width="64" height="54" loading="lazy"><span>${category}</span><small>${count} pozycji</small>`;
+    button.dataset.category=category;
+    button.innerHTML=`<span class="category-photo"><img src="${menuWebPhoto(categoryPhotos[category])}" alt="" width="320" height="220" loading="lazy"></span><span class="category-copy"><span class="category-name">${category}</span><small>${count} pozycji</small></span>`;
     button.setAttribute('aria-pressed',String(category===activeCategory));
     button.addEventListener('click',()=>{
       activeCategory=category;

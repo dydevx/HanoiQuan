@@ -19,9 +19,9 @@ colors:
 typography:
   display:
     fontFamily: "Manrope, sans-serif"
-    fontSize: "clamp(44px, 4.7vw, 68px)"
+    fontSize: "clamp(48px, 5.8vw, 84px)"
     fontWeight: 800
-    lineHeight: 1.1
+    lineHeight: 1.08
     letterSpacing: "-0.035em"
   headline:
     fontFamily: "Manrope, sans-serif"
@@ -97,12 +97,12 @@ components:
     rounded: "{rounded.surface}"
     padding: "22px"
   category:
-    backgroundColor: "{colors.paper-2}"
+    backgroundColor: "transparent"
     rounded: "{rounded.surface}"
-    padding: "15px 8px 12px"
-    height: "142px"
+    padding: "0; caption 16px 4px 8px"
+    height: "auto; photo 4:3 plus 68px caption"
   category-active:
-    backgroundColor: "{colors.selection-surface}"
+    backgroundColor: "transparent"
     textColor: "{colors.gold}"
   field:
     backgroundColor: "{colors.paper}"
@@ -162,10 +162,10 @@ Local WOFF2 files load through `assets/fonts/fonts.css` with `font-display: swap
 
 ### Hierarchy
 
-- **Display:** The hero uses the display role. At mobile widths it becomes `clamp(40px, 7.4vw, 58px)` and then (43px) at the narrowest breakpoint.
+- **Display:** The centered hero makes “Hà Nội Quán” the largest line in gold. “Smak Azji.” appears above in warm white at 56% of the main size, weight 700, with (12px) separation. Its maximum width is (800px), with a soft dark text shadow and (28px) separation from the description. At mobile widths it becomes `clamp(46px, 8.8vw, 68px)` and then `clamp(36px, 11.8vw, 50px)` at the narrowest breakpoint.
 - **Headline:** Section headings use the headline role and become (34px) on mobile. Normal case and balanced wrapping remain.
 - **Title:** Dish names use the title role and become (27px) on narrow screens. The menu toolbar uses Barlow Condensed at (28px), weight (700), line height (1.2).
-- **Body:** General reading uses the body role; menu descriptions use card-body and become (14px) on narrow screens. Hero copy is (17px), line height (1.7), maximum width (430px), reducing to (15px) and (360px) on mobile.
+- **Body:** General reading uses the body role; menu descriptions use card-body and become (14px) on narrow screens. Centered hero copy is warm white at (18px), line height (1.7), maximum width (500px), reducing to (15px) and (360px) on mobile. A stronger central overlay keeps the headline and description clear over the photograph.
 - **Label:** Gold actions use the label role. Navigation is (13px), weight (600), without uppercase or tracking.
 - **Price:** The price role uses tabular numerals to stabilize variant prices.
 
@@ -175,7 +175,7 @@ Local WOFF2 files load through `assets/fonts/fonts.css` with `font-display: swap
 
 The shared container caps at (1280px), with total horizontal subtraction of (64px) on desktop and (36px) on mobile. The sticky header is (80px) tall on desktop and (68px) on mobile.
 
-Categories use seven equal columns with a (12px) gap. At mobile widths they become a horizontally scrollable rail with (118px) items and proximity snapping. Dish cards form two columns with a (24px) gap, reducing to (16px) on mobile and one column at (520px) and below.
+Categories use seven equal columns with an (18px) gap. At (1120px) and below they become a horizontally scrollable rail with (156px) items and proximity snapping, reducing to (138px) items on mobile. Dish cards form two columns with a (24px) gap, reducing to (16px) on mobile and one column at (520px) and below.
 
 The order shell combines the flexible menu with a (280px) sticky cart and (28px) separation. The cart sticks at (104px) from the top. At (1120px) and below, the summary hides and the floating cart accesses the drawer. The drawer width caps at (520px) and its height follows `100dvh`.
 
@@ -209,7 +209,7 @@ State changes are brief and generally avoid positional movement. Global keyboard
 
 ### Category Selector
 
-Each category presents a food thumbnail, name and count. The selected tile has gold border and text with a warmer brown background. `aria-pressed` follows selection. Mobile scrolling preserves the full category set.
+Each category presents a rounded (4:3) food photograph on a dark background above a centered name and count, without an outer card or filled caption. Captions have (16px 4px 8px) padding and a (68px) minimum height. Selection uses gold text and a short (36px) underline. Pointer hover gently lifts the image and brightens it, with reduced motion respected. Existing photographs are served as 480px WebP copies from `assets/web/categories`; the all-dishes photograph uses the current hero composition. `aria-pressed` follows selection. Tablet and mobile scrolling preserve the full category set.
 
 ### Cards / Containers
 
@@ -225,9 +225,9 @@ The retained logo and restaurant name sit opposite plain links and a gold cart c
 
 ### Food Imagery and Serving Suggestions
 
-The hero is an edited composition based on an existing sushi photograph. Each of the 40 catalog sushi photographs is edited from its corresponding restaurant source, with ginger, wasabi, wakame and soy sauce on the same table, matched perspective, light and contact shadows. Wasabi is contained in a tiny low ceramic condiment bowl in every catalog photograph and the hero. Sashimi retains its existing accompaniments, with wasabi placed in a bowl, and adds soy sauce. A visible Polish note identifies accompaniments as a serving suggestion; imagery does not establish price or inclusion promises.
+The hero is an overhead composition based on the restaurant's phở, fried spring roll and sushi photographs, with dark table space for centered text and actions. Each of the 40 catalog sushi photographs is edited from its corresponding restaurant source, with ginger, wasabi, wakame and soy sauce on the same table, matched perspective, light and contact shadows. Wasabi is contained in a tiny low ceramic condiment bowl in every catalog photograph and the hero. Sashimi retains its existing accompaniments, with wasabi placed in a bowl, and adds soy sauce. A visible Polish note identifies accompaniments as a serving suggestion; imagery does not establish price or inclusion promises.
 
-Sources and exact generation prompts are in `assets/image-prompts.json`, `assets/sushi-edited/manifest.json` and `assets/sushi-edited/wasabi-bowls.json`. The site serves responsive `hero-sushi-wasabi-bowl` WebP derivatives, `assets/web/menu` Asian copies and 800px landscape `s*-wasabi-bowl.webp` sushi copies in `assets/sushi-edited`. Original photographs and previous generated PNGs remain. The previous transparent garnish is retained as a historical asset and is no longer rendered. New generated assets need equivalent provenance.
+Sources and exact generation prompts are in `assets/image-prompts.json`, `assets/sushi-edited/manifest.json` and `assets/sushi-edited/wasabi-bowls.json`. The site serves responsive `hero-vietnamese-table` WebP derivatives, `assets/web/menu` Asian copies and 800px landscape `s*-wasabi-bowl.webp` sushi copies in `assets/sushi-edited`. Original photographs and previous generated PNGs remain. The previous transparent garnish is retained as a historical asset and is no longer rendered. New generated assets need equivalent provenance.
 
 ### Motion
 

@@ -11,7 +11,7 @@ Visitor mode: Persuade — discover the restaurant, browse dishes, act through W
 
 **STORY:** Visitors see the cuisine and restaurant name, find local contact details, choose categories and priced variants, then send a cart for restaurant confirmation through WhatsApp. Original menu cards remain accessible in a lightbox.
 
-**FIRST VIEWPORT:** A compact sticky header precedes a large sushi photograph. “Smak Azji. Serce Hà Nội.” and two actions occupy the darker left region on desktop; local information closes the hero. Mobile changes crop and overlay while retaining the heading and actions. The signature lightweight interaction is a CSS scroll-progress line.
+**FIRST VIEWPORT:** A compact sticky header precedes an overhead photograph combining phở, fried spring rolls and sushi from restaurant source photos. “Hà Nội Quán” leads in large gold type, with the smaller warm-white “Smak Azji.” above it. The heading, description and two actions are centered in the dark table space on desktop; local information closes the hero. Mobile centers the same content while shifting the photograph toward the right-hand dishes and strengthening the overlay. The signature lightweight interaction is a CSS scroll-progress line.
 
 **FORM:** Code-led targeted refinement of the existing restaurant landing page and menu. No decision comp was selected or approved. No randomized form-selection seed was used; none is retroactively invented.
 
@@ -25,9 +25,10 @@ Visitor mode: Persuade — discover the restaurant, browse dishes, act through W
 - Asian dish numbers follow the printed menu: curry 13, sweet-and-sour 14, Bún bò Nam Bộ 28, dry chicken phở 29. Photo mappings are independent of dish numbering.
 - Sushi serving suggestions show ginger, wasabi, wakame and soy sauce with visible Polish copy. Do not turn imagery into an inclusion or pricing promise.
 - Wasabi is contained in a tiny ceramic condiment bowl across all 40 catalog photos and the hero. S32, S33 and S40 retain their existing bowls; the other 37 catalog images and hero have targeted wasabi-bowl edits. Prompts and follow-up framing corrections are recorded in `assets/sushi-edited/wasabi-bowls.json`.
-- Hero and historical transparent garnish prompts are in `assets/image-prompts.json`. All 40 individually edited sushi prompts and source mappings are in `assets/sushi-edited/manifest.json`. Original photos remain; responsive hero WebP, Asian `assets/web/menu` copies and integrated sushi WebP photographs are delivery assets.
+- Hero and historical transparent garnish prompts are in `assets/image-prompts.json`. The current hero is `assets/hero-vietnamese-table.webp` with a 960px mobile derivative; its PNG and three restaurant food sources are retained. All 40 individually edited sushi prompts and source mappings are in `assets/sushi-edited/manifest.json`. Original photos remain; responsive hero WebP, Asian `assets/web/menu` copies and integrated sushi WebP photographs are delivery assets.
 - S17/S18 photo references match their corrected source dishes; S35 uses the balanced-exposure derivative.
 - Fonts load locally as WOFF2; TTF sources and OFL notices remain in `assets/fonts`.
+- Category filters use rounded 4:3 photographs on dark backgrounds and centered captions, without outer card borders or filled captions. Gold text and a short underline identify selection. Existing local imagery is served through 480px WebP category derivatives. The seven-column desktop row becomes a snapping horizontal rail below 1120px; all categories, counts and filtering remain available. The all-dishes category uses the current hero photograph.
 - Asian photographs use per-dish focal crops and taller frames for overhead or multi-plate servings. Desktop pairs align their image heights; mobile uses each dish's own frame. Sushi uses full landscape (4:3) photographs with serving-suggestion accompaniments integrated on the same table, without CSS overlays or side bars.
 
 ## Evidence and authority
