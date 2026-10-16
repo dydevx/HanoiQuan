@@ -226,8 +226,8 @@ const dishPhotoFrames = {
   makaron: {position:'50% 77%'},
   'makaron-ryzowy': {position:'50% 78%'},
   padthai: {position:'50% 78%'},
-  udon: {position:'50% 80%'},
-  pho: {position:'50% 81%'},
+  udon: {ratio:1,position:'50% 50%'},
+  pho: {ratio:1,position:'50% 45%'},
   bun: {ratio:1,position:'50% 42%'},
   bunbo: {ratio:4/5,position:'50% 44%'},
   'pho-kurczak-sos': {position:'50% 57%'},
@@ -241,6 +241,30 @@ ORDER_MENU.forEach(item => {
     ? `assets/sushi-edited/${item.id}-wasabi-bowl.webp`
     : menuWebPhoto(item.image);
   if (item.images) item.images = item.images.map(menuWebPhoto);
+});
+// Latest restaurant photos, renamed and optimized for stable web paths.
+const latestDishPhotos = {
+  'wieprzowina-karmel': 'assets/web/menu-new/wieprzowina-karmel.webp',
+  'springrolls-krewetki': 'assets/web/menu-new/springrolls-krewetki.webp',
+  'sos-tajski': 'assets/web/menu-new/sos-tajski.webp',
+  udon: 'assets/web/menu-new/udon.webp',
+  pho: 'assets/web/menu-new/pho.webp',
+  kungbao: 'assets/web/menu-new/kungbao.webp',
+  ryz: 'assets/web/menu-new/ryz.webp',
+  'udko-smazone': 'assets/web/menu-new/udko-smazone.webp',
+  losos: 'assets/web/menu-new/losos.webp',
+  buncha: 'assets/web/menu-new/buncha.webp',
+  'slodko-kwasny': 'assets/web/menu-new/slodko-kwasny.webp',
+  bunbo: 'assets/web/menu-new/bunbo.webp',
+  'krab-tamaryndowy': 'assets/web/menu-new/krab-tamaryndowy.webp',
+  kaczka: 'assets/web/menu-new/kaczka.webp',
+  curry: 'assets/web/menu-new/curry.webp',
+  bun: 'assets/web/menu-new/bun.webp',
+  bone: 'assets/web/menu-new/bone.webp'
+};
+Object.entries(latestDishPhotos).forEach(([dishId, photoPath]) => {
+  const item = ORDER_MENU.find(dish => dish.id === dishId);
+  if (item) item.image = photoPath;
 });
 const money = value => new Intl.NumberFormat('pl-PL',{style:'currency',currency:'PLN'}).format(value);
 let cart = {};
