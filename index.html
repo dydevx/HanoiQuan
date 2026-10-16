@@ -86,7 +86,7 @@
     <div class="nav-wrap">
       <a class="brand" href="#start" aria-label="Hà Nội Quán, strona główna"><img class="brand-logo" src="assets/logo.webp" alt="" width="1254" height="1254"><span>Hà Nội Quán</span></a>
       <button class="menu-toggle" id="menuToggle" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
-      <nav class="main-nav" id="mainNav" aria-label="Główna nawigacja"><a href="#zamow">Zamów online</a><a href="#onas">O nas</a><a href="#menu">Pełne menu</a><a href="#kontakt">Kontakt</a><a class="mobile-nav-cta" href="#zamow">Wybierz dania</a></nav>
+      <nav class="main-nav" id="mainNav" aria-label="Główna nawigacja"><a href="#zamow">Zamów online</a><a href="#onas">O nas</a><a href="#zamow">Menu</a><a href="#kontakt">Kontakt</a><a class="mobile-nav-cta" href="#zamow">Wybierz dania</a></nav>
       <button class="cart-trigger nav-cta" id="cartTrigger" type="button">Koszyk <span id="cartCount">0</span></button>
     </div>
   </header>
@@ -97,7 +97,7 @@
       <div class="container hero-content">
         <h1><span class="hero-title-accent">HÀ NỘI QUÁN</span><span class="hero-title-description">Restauracja wietnamsko-tajska i kuchnia azjatycka</span><span class="hero-title-location">Cieszyn, Polska</span></h1>
         <p>Wietnamskie i tajskie jedzenie w Cieszynie. Spróbuj phở, Pad Thai, dań z woka i sushi.</p>
-        <div class="hero-actions"><a class="btn" href="#zamow">Zamów online</a><a class="btn btn-outline" href="#menu">Pełne menu</a></div>
+        <div class="hero-actions"><a class="btn" href="#zamow">Zamów online</a><a class="btn btn-outline" href="#zamow">Zobacz menu</a></div>
       </div>
     </section>
 
@@ -114,14 +114,28 @@
       <div class="container">
         <header class="order-intro">
           <h2 id="orderTitle">Na co masz ochotę?</h2>
-          <p>Wybierz kategorię i swoje ulubione dania. Zamówienie wyślesz przez WhatsApp, a my potwierdzimy cenę i czas realizacji.</p>
-          <a class="text-link" href="#menu">Zobacz oryginalne karty menu</a>
+          <p>Poznaj menu restauracji wietnamskiej i tajskiej Hà Nội Quán w Cieszynie. Znajdziesz tu kuchnię azjatycką, Pad Thai, phở, dania z woka i sushi. Wyszukaj danie, wybierz kategorię i zamów przez WhatsApp.</p>
         </header>
+        <form class="menu-search" id="menuSearchForm" role="search">
+          <label for="menuSearch">Szukaj w menu</label>
+          <div class="menu-search-control">
+            <input id="menuSearch" type="search" inputmode="search" enterkeyhint="search" autocomplete="off" placeholder="Np. Pad Thai, phở, kaczka" aria-describedby="menuSearchHint" aria-controls="orderGrid">
+            <button id="clearMenuSearch" type="button" hidden>Wyczyść</button>
+          </div>
+          <p id="menuSearchHint">Wpisz nazwę dania, składnik lub kategorię.</p>
+        </form>
         <nav class="category-rail" id="categoryTabs" aria-label="Kategorie menu"></nav>
-        <div class="menu-toolbar"><h3 id="categoryTitle">Wszystkie dania</h3><span id="menuResultCount"></span></div>
+        <div class="menu-toolbar"><h3 id="categoryTitle">Wszystkie dania</h3><span id="menuResultCount" aria-live="polite"></span></div>
         <p class="sushi-serving-note" id="sushiServingNote" hidden>Zdjęcia sushi przedstawiają propozycję podania z imbirem, wasabi, wakame i sosem sojowym.</p>
         <div class="order-shell">
-          <div class="order-grid" id="orderGrid" aria-live="polite"></div>
+          <div class="order-results">
+            <div class="order-grid" id="orderGrid"></div>
+            <div class="menu-empty-state" id="menuEmptyState" role="status" hidden>
+              <strong>Nie znaleźliśmy takiego dania</strong>
+              <p>Spróbuj innej nazwy lub wyczyść wyszukiwanie.</p>
+              <button id="clearMenuSearchEmpty" type="button">Pokaż całe menu</button>
+            </div>
+          </div>
           <aside class="desktop-cart" aria-label="Podsumowanie koszyka">
             <div class="desktop-cart-head"><span>Twoje zamówienie</span><strong><b id="desktopCartCount">0</b> pozycji</strong></div>
             <div class="desktop-cart-items" id="desktopCartItems"></div>
@@ -139,16 +153,6 @@
           <figure class="story-photo story-photo-main"><img src="assets/web/menu/pho.webp" alt="Miska aromatycznego phở ze świeżymi ziołami" loading="lazy"></figure>
           <figure class="story-photo"><img src="assets/web/menu/sajgonki.webp" alt="Chrupiące sajgonki" loading="lazy"></figure>
           <figure class="story-photo"><img src="assets/web/menu/bunbo.webp" alt="Bún bò Nam Bộ" loading="lazy"></figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="full-menu" id="menu">
-      <div class="container full-menu-grid">
-        <div class="full-menu-copy"><h2>Pełne menu</h2><p>Zobacz menu restauracji w Cieszynie: dania wietnamskie, kuchnię tajską, Pad Thai, zupy, makarony, sushi i aktualne ceny.</p></div>
-        <div class="menu-links">
-          <button type="button" data-lightbox="menu" data-index="0"><span><b>Kuchnia azjatycka</b><small>Przystawki, zupy, makarony i dania główne</small></span><strong>Otwórz →</strong></button>
-          <button type="button" data-lightbox="menu" data-index="1"><span><b>Sushi</b><small>Zestawy, hosomaki, futomaki i nigiri</small></span><strong>Otwórz →</strong></button>
         </div>
       </div>
     </section>
@@ -176,13 +180,12 @@
       </div>
       <div class="footer-column"><h3>Odwiedź nas</h3><address>Srebrna 14<br>43-400 Cieszyn</address><a href="tel:+48579344577">+48 579 344 577</a></div>
       <div class="footer-column"><h3>Godziny</h3><p><span>Niedz.-Śr.</span><b>09:00-21:00</b></p><p><span>Czw.-Sob.</span><b>09:00-22:00</b></p></div>
-      <nav class="footer-column footer-nav" aria-label="Nawigacja w stopce"><h3>Na skróty</h3><a href="#zamow">Zamów online</a><a href="#onas">O nas</a><a href="#menu">Pełne menu</a><a href="#kontakt">Kontakt</a></nav>
+      <nav class="footer-column footer-nav" aria-label="Nawigacja w stopce"><h3>Na skróty</h3><a href="#zamow">Zamów online</a><a href="#onas">O nas</a><a href="#zamow">Menu</a><a href="#kontakt">Kontakt</a></nav>
     </div>
     <div class="container footer-bottom"><p class="footer-credit"><span>© 2026 Hà Nội Quán</span><span>Autentyczna kuchnia wietnamska i azjatycka</span><span class="designer-credit">Design By HoangCaster</span></p><a href="#start">Do góry ↑</a></div>
   </footer>
   <button class="floating-cart" id="floatingCart" type="button"><span>Koszyk</span><b id="floatingCartCount">0</b></button>
   <a id="whatsappOrder" href="https://wa.me/48579344577" hidden></a><a id="whatsappFooter" href="https://wa.me/48579344577" hidden></a><a id="floatingWhatsapp" href="https://wa.me/48579344577" hidden></a><a id="mobileWhatsapp" href="https://wa.me/48579344577" hidden></a>
-  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Podgląd menu" hidden><button class="lightbox-close" type="button" aria-label="Zamknij">×</button><button class="lightbox-prev" type="button" aria-label="Poprzednia strona">‹</button><div class="lightbox-stage"><img id="lightboxImage" src="1000018876.JPEG" alt=""><p id="lightboxCounter"></p></div><button class="lightbox-next" type="button" aria-label="Następna strona">›</button></div>
   <div class="cart-backdrop" id="cartBackdrop" hidden></div>
   <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true" inert>
     <div class="cart-head"><div><span>Twoje zamówienie</span><h2 id="cartTitle">Koszyk</h2></div><button class="cart-close" id="cartClose" type="button" aria-label="Zamknij koszyk">×</button></div>

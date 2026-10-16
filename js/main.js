@@ -4,20 +4,6 @@ const SITE_CONFIG = {
   social: { facebook: '', instagram: '', messenger: '' }
 };
 
-const menuImages = [
-  { src: '1000018876.JPEG', alt: 'Menu dań azjatyckich Hà Nội Quán' },
-  { src: '1000018866.JPG', alt: 'Menu sushi Hà Nội Quán' }
-];
-const galleryImages = [
-  ['image_1786957935929.jpg','Danie z mięsem, warzywami i ryżem'],
-  ['image_1786957935932.jpg','Danie z kurczakiem, brokułami i ryżem'],
-  ['image_1786957935937.jpg','Mięso podane na gorącym półmisku'],
-  ['image_1786957935938.jpg','Grillowane mięso z makaronem'],
-  ['image_1786957935942.jpg','Makaron udon z wołowiną'],
-  ['image_1786957935946.jpg','Miska z wołowiną, ryżem i sałatką'],
-  ['image_1786957935948.jpg','Grillowany kurczak z ryżem i sałatką']
-].map(([src, alt]) => ({ src, alt }));
-
 document.documentElement.classList.add('js-ready');
 
 document.querySelectorAll('#whatsappReservation,#whatsappOrder,#whatsappFooter,#floatingWhatsapp,#mobileWhatsapp').forEach(link => {
@@ -64,21 +50,6 @@ setInterval(updateOpeningStatus,60000);
 const reduceMotion = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const revealObserver = new IntersectionObserver(entries => entries.forEach(entry => { if(entry.isIntersecting){ entry.target.classList.add('visible'); revealObserver.unobserve(entry.target); } }),{threshold:.12});
 document.querySelectorAll('.reveal').forEach((el,index) => { if(reduceMotion) el.classList.add('visible'); else { el.style.transitionDelay = `${Math.min(index % 4,3) * 70}ms`; revealObserver.observe(el); } });
-
-const lightbox = document.querySelector('#lightbox');
-const lightboxImage = document.querySelector('#lightboxImage');
-const counter = document.querySelector('#lightboxCounter');
-let activeSet = galleryImages, activeIndex = 0, lastTrigger = null;
-function renderLightbox(){ const item=activeSet[activeIndex]; lightboxImage.src=item.src; lightboxImage.alt=item.alt; counter.textContent=`${activeIndex+1} / ${activeSet.length}`; }
-function openLightbox(type,index,trigger){ activeSet=type==='menu'?menuImages:galleryImages; activeIndex=index; lastTrigger=trigger; renderLightbox(); lightbox.hidden=false; document.body.classList.add('lightbox-open'); document.querySelector('.lightbox-close').focus(); }
-function closeLightbox(){ lightbox.hidden=true; document.body.classList.remove('lightbox-open'); lightboxImage.removeAttribute('src'); lastTrigger?.focus(); }
-function step(direction){ activeIndex=(activeIndex+direction+activeSet.length)%activeSet.length; renderLightbox(); }
-document.querySelectorAll('[data-lightbox]').forEach(btn => btn.addEventListener('click',()=>openLightbox(btn.dataset.lightbox,Number(btn.dataset.index),btn)));
-document.querySelector('.lightbox-close').addEventListener('click',closeLightbox);
-document.querySelector('.lightbox-prev').addEventListener('click',()=>step(-1));
-document.querySelector('.lightbox-next').addEventListener('click',()=>step(1));
-lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLightbox();});
-document.addEventListener('keydown',e=>{if(lightbox.hidden)return;if(e.key==='Escape')closeLightbox();if(e.key==='ArrowLeft')step(-1);if(e.key==='ArrowRight')step(1);});
 
 const ORDER_MENU = [
   {id:'zupa-mala',name:'Zupa',category:'Zupy',price:10,image:'assets/dishes/bun.jpg',images:['assets/menu/zupa-mala.jpg','assets/menu/zupa-mala-2.jpg'],description:'Mała zupa - wybierz kraba, kurczaka albo miso.',variantLabel:'Wybierz zupę',variants:[['Z krabem',10],['Z kurczakiem',10],['Miso',12]]},
@@ -279,9 +250,15 @@ const resolveCartItem = key => {
 };
 cart = Object.fromEntries(Object.entries(cart).filter(([key,qty]) => resolveCartItem(key) && Number(qty) > 0));
 let activeCategory = 'Wszystkie';
+let menuSearchQuery = '';
 const selectedVariants = new Map();
 const orderGrid = document.querySelector('#orderGrid');
 const categoryTabs = document.querySelector('#categoryTabs');
+const menuSearchForm = document.querySelector('#menuSearchForm');
+const menuSearchInput = document.querySelector('#menuSearch');
+const clearMenuSearch = document.querySelector('#clearMenuSearch');
+const clearMenuSearchEmpty = document.querySelector('#clearMenuSearchEmpty');
+const menuEmptyState = document.querySelector('#menuEmptyState');
 const cartDrawer = document.querySelector('#cartDrawer');
 const cartBackdrop = document.querySelector('#cartBackdrop');
 const cartItems = document.querySelector('#cartItems');
@@ -315,10 +292,17 @@ function renderCategories(){
 }
 function renderMenu(){
   orderGrid.innerHTML='';
-  const dishes=ORDER_MENU.filter(item=>activeCategory==='Wszystkie'||item.category===activeCategory);
-  document.querySelector('#categoryTitle').textContent=activeCategory==='Wszystkie'?'Wszystkie dania':activeCategory;
-  document.querySelector('#menuResultCount').textContent=`${dishes.length} pozycji`;
+  const normalizedQuery=normalizeMenuSearch(menuSearchQuery);
+  const dishes=ORDER_MENU.filter(item=>{
+    const inCategory=activeCategory==='Wszystkie'||item.category===activeCategory;
+    const searchText=[item.name,item.description,item.category,item.variantLabel,...(item.variants?.map(([name])=>name)??[])].filter(Boolean).join(' ');
+    return inCategory&&(!normalizedQuery||normalizeMenuSearch(searchText).includes(normalizedQuery));
+  });
+  document.querySelector('#categoryTitle').textContent=normalizedQuery?`Wyniki dla „${menuSearchQuery.trim()}”`:activeCategory==='Wszystkie'?'Wszystkie dania':activeCategory;
+  document.querySelector('#menuResultCount').textContent=menuResultLabel(dishes.length);
   document.querySelector('#sushiServingNote').hidden=!dishes.some(item=>item.category.startsWith('Sushi'));
+  orderGrid.hidden=dishes.length===0;
+  menuEmptyState.hidden=dishes.length!==0;
   dishes.forEach((item,index)=>{
     const article=document.createElement('article'); article.className='order-card menu-enter'; article.dataset.dishId=item.id; article.style.setProperty('--enter-delay',`${Math.min(index,7)*55}ms`);
     const variantLabel=item.variantLabel??'Wybierz wariant';
@@ -337,6 +321,36 @@ function renderMenu(){
     orderGrid.append(article);
   });
 }
+function normalizeMenuSearch(value){
+  return value.toLocaleLowerCase('pl-PL').normalize('NFD').replace(/[\u0300-\u036f]/g,'').replaceAll('ł','l').replaceAll('đ','d').trim();
+}
+function menuResultLabel(count){
+  const lastTwo=count%100;
+  const ending=count===1?'pozycja':lastTwo>=12&&lastTwo<=14?'pozycji':[2,3,4].includes(count%10)?'pozycje':'pozycji';
+  return `${count} ${ending}`;
+}
+function resetMenuSearch(){
+  menuSearchInput.value='';
+  menuSearchQuery='';
+  clearMenuSearch.hidden=true;
+  renderMenu();
+  menuSearchInput.focus();
+}
+menuSearchForm.addEventListener('submit',event=>event.preventDefault());
+menuSearchInput.addEventListener('input',()=>{
+  menuSearchQuery=menuSearchInput.value;
+  if(menuSearchQuery.trim()&&activeCategory!=='Wszystkie'){
+    activeCategory='Wszystkie';
+    renderCategories();
+  }
+  clearMenuSearch.hidden=!menuSearchQuery.trim();
+  renderMenu();
+});
+menuSearchInput.addEventListener('keydown',event=>{
+  if(event.key==='Escape'&&menuSearchInput.value){event.preventDefault();resetMenuSearch()}
+});
+clearMenuSearch.addEventListener('click',resetMenuSearch);
+clearMenuSearchEmpty.addEventListener('click',resetMenuSearch);
 function cartQuantity(){return Object.values(cart).reduce((sum,qty)=>sum+qty,0)}
 function updateCart(){
   try { localStorage.setItem('hnq-cart',JSON.stringify(cart)); } catch { /* Ordering also works without browser storage. */ }
@@ -395,7 +409,7 @@ document.addEventListener('keydown',event=>{
     if(nav.classList.contains('open')){closeMenu();toggle.focus()}
   }
   if(event.key!=='Tab')return;
-  const dialog=cartDrawer.classList.contains('open')?cartDrawer:!lightbox.hidden?lightbox:null;
+  const dialog=cartDrawer.classList.contains('open')?cartDrawer:null;
   if(!dialog)return;
   const focusable=[...dialog.querySelectorAll('button,a[href],input,textarea,select')].filter(el=>!el.disabled&&el.getClientRects().length);
   const first=focusable[0],last=focusable.at(-1);
