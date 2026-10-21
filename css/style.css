@@ -366,8 +366,8 @@ input, textarea { caret-color: var(--gold); }
 .hero h1 { max-width: 800px; margin-inline: auto; font: 800 clamp(48px, 5.8vw, 84px)/1.08 var(--body); letter-spacing: -.035em; text-transform: none; margin-bottom: 28px; text-wrap: balance; text-shadow: 0 4px 24px rgb(0 0 0 / 45%); }
 .hero-title-intro { display: block; margin-bottom: 12px; font-size: .56em; font-weight: 700; line-height: 1.2; letter-spacing: -.02em; }
 .hero-title-accent { display: block; color: var(--gold); }
-.hero-title-description { display: block; max-width: 800px; margin: 14px auto 0; color: var(--white); font-size: .42em; font-weight: 700; line-height: 1.25; letter-spacing: -.015em; }
-.hero-title-location { display: block; margin-top: 12px; color: #d7d0c8; font-size: .28em; font-weight: 600; line-height: 1.3; letter-spacing: 0; }
+.hero-title-description { display: block; max-width: 800px; margin: 14px auto 0; color: var(--white); font-size: .55em; font-weight: 700; line-height: 1.25; letter-spacing: -.015em; }
+.hero-title-location { display: block; margin-top: 12px; color: #d7d0c8; font-size: .4em; font-weight: 600; line-height: 1.3; letter-spacing: 0; }
 .hero-content > p { max-width: 500px; margin-inline: auto; color: var(--white); font-size: 18px; line-height: 1.7; margin-bottom: 32px; text-wrap: pretty; text-shadow: 0 2px 12px rgb(0 0 0 / 50%); }
 .hero-actions { display: flex; justify-content: center; flex-wrap: wrap; gap: 14px; }
 .btn { min-height: 48px; border: 1px solid var(--gold); border-radius: 8px; padding: 12px 24px; background: var(--gold); color: var(--ink); font-size: 13px; text-transform: none; white-space: nowrap; transition: background .2s; }
@@ -597,8 +597,8 @@ body { overflow-x: hidden; font-size: 17px; }
 .hero .hero-photo { object-position: center; }
 .hero::after { background: linear-gradient(0deg, rgb(39 3 5 / 30%), rgb(39 3 5 / 8%) 55%, rgb(39 3 5 / 20%)), radial-gradient(ellipse at center, rgb(35 3 5 / 58%), rgb(35 3 5 / 5%) 76%); }
 .hero h1 { max-width: 860px; font-size: clamp(52px, 6.1vw, 90px); }
-.hero-title-description { font-size: .44em; }
-.hero-title-location { font-size: .3em; }
+.hero-title-description { font-size: .48em; }
+.hero-title-location { font-size: .34em; }
 .hero-content > p { max-width: 590px; font-size: 20px; line-height: 1.6; }
 .btn { min-height: 52px; padding: 13px 26px; font-size: 15px; }
 .quick-info span { font-size: 13px; }
@@ -672,8 +672,8 @@ body { overflow-x: hidden; font-size: 17px; }
   .nav-cta::before { font-size: 12px; }
   .hero { min-height: min(600px, calc(100dvh - 72px)); }
   .hero h1 { font-size: clamp(38px, 11.5vw, 50px); }
-  .hero-title-description { font-size: .46em; }
-  .hero-title-location { font-size: .34em; }
+  .hero-title-description { font-size: .5em; }
+  .hero-title-location { font-size: .38em; }
   .hero-content > p { font-size: 17px; line-height: 1.55; }
   .hero-actions .btn { padding-inline: 18px; font-size: 14px; }
   .order-card h3 { font-size: 29px; }
@@ -744,8 +744,8 @@ body { overflow-x: hidden; font-size: 17px; }
     letter-spacing: -.045em;
   }
   .hero-title-accent { font-size: 1.08em; white-space: nowrap; }
-  .hero-title-description { margin-top: 10px; font-size: .46em; line-height: 1.3; letter-spacing: -.02em; }
-  .hero-title-location { margin-top: 8px; font-size: .34em; }
+  .hero-title-description { margin-top: 10px; font-size: .5em; line-height: 1.3; letter-spacing: -.02em; }
+  .hero-title-location { margin-top: 8px; font-size: .38em; }
   .hero-content > p {
     max-width: 350px;
     margin-bottom: 22px;
