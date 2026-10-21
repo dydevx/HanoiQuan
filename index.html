@@ -14,11 +14,12 @@
   <meta property="og:title" content="Hà Nội Quán | Restauracja wietnamsko-tajska Cieszyn">
   <meta property="og:description" content="Kuchnia wietnamska, tajska i azjatycka w Cieszynie. Zobacz menu, zdjęcia dań, godziny otwarcia i zamów online.">
   <meta property="og:url" content="https://hanoiquanfood-cieszyn.pl/">
-  <meta property="og:image" content="https://hanoiquanfood-cieszyn.pl/1.jpg">
-  <meta property="og:image:alt" content="Dania kuchni wietnamskiej, tajskiej i azjatyckiej w Hà Nội Quán w Cieszynie">
+  <meta property="og:image" content="https://hanoiquanfood-cieszyn.pl/assets/hero-table-sushi-red-v2.jpg">
+  <meta property="og:image:alt" content="Dania Hà Nội Quán z dwoma zestawami sushi na czerwonym stole">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" type="image/webp" href="assets/logo.webp">
-  <link rel="preload" as="image" href="1.jpg" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="assets/hero-table-sushi-red-v2-mobile.webp" media="(max-width: 780px)" fetchpriority="high">
+  <link rel="preload" as="image" type="image/webp" href="assets/hero-table-sushi-red-v2.webp" media="(min-width: 781px)" fetchpriority="high">
   <link rel="stylesheet" href="assets/fonts/fonts.css">
   <link rel="stylesheet" href="css/style.css">
   <script type="application/ld+json">
@@ -32,7 +33,7 @@
     "url": "https://hanoiquanfood-cieszyn.pl/",
     "logo": "https://hanoiquanfood-cieszyn.pl/assets/logo.webp",
     "image": [
-      "https://hanoiquanfood-cieszyn.pl/1.jpg",
+      "https://hanoiquanfood-cieszyn.pl/assets/hero-table-sushi-red-v2.jpg",
       "https://hanoiquanfood-cieszyn.pl/assets/web/menu-new/pho.webp",
       "https://hanoiquanfood-cieszyn.pl/assets/web/menu-new/buncha.webp"
     ],
@@ -87,13 +88,18 @@
       <a class="brand" href="#start" aria-label="Hà Nội Quán, strona główna"><img class="brand-logo" src="assets/logo.webp" alt="" width="1254" height="1254"><span>Hà Nội Quán</span></a>
       <button class="menu-toggle" id="menuToggle" type="button" aria-label="Otwórz menu" aria-expanded="false" aria-controls="mainNav"><span></span><span></span><span></span></button>
       <nav class="main-nav" id="mainNav" aria-label="Główna nawigacja"><a href="#zamow">Zamów online</a><a href="#onas">O nas</a><a href="#zamow">Menu</a><a href="#kontakt">Kontakt</a><a class="mobile-nav-cta" href="#zamow">Wybierz dania</a></nav>
+      <a class="header-phone" href="tel:+48579344577" aria-label="Zadzwoń: +48 579 344 577"><span class="header-phone-label">Zadzwoń</span><strong><span class="phone-country">+48 </span>579 344 577</strong></a>
       <button class="cart-trigger nav-cta" id="cartTrigger" type="button">Koszyk <span id="cartCount">0</span></button>
     </div>
   </header>
 
   <main id="main">
     <section class="hero" id="start" aria-label="Hà Nội Quán, restauracja wietnamsko-tajska i kuchnia azjatycka w Cieszynie">
-      <img class="hero-photo" src="1.jpg" alt="Dania kuchni wietnamskiej i tajskiej Hà Nội Quán podane na wspólnym stole." width="2048" height="1536" fetchpriority="high">
+      <picture>
+        <source media="(max-width: 780px)" srcset="assets/hero-table-sushi-red-v2-mobile.webp" type="image/webp">
+        <source srcset="assets/hero-table-sushi-red-v2.webp" type="image/webp">
+        <img class="hero-photo" src="assets/hero-table-sushi-red-v2.jpg" alt="Dania Hà Nội Quán z dwoma zestawami sushi u góry, podane na czerwonym stole." width="1448" height="1086" fetchpriority="high">
+      </picture>
       <div class="container hero-content">
         <h1><span class="hero-title-accent">HÀ NỘI QUÁN</span><span class="hero-title-description">Restauracja wietnamsko-tajska i kuchnia azjatycka</span><span class="hero-title-location">Cieszyn, Polska</span></h1>
         <p>Wietnamskie i tajskie jedzenie w Cieszynie. Spróbuj phở, Pad Thai, dań z woka i sushi.</p>
@@ -184,7 +190,7 @@
     </div>
     <div class="container footer-bottom"><p class="footer-credit"><span>© 2026 Hà Nội Quán</span><span>Autentyczna kuchnia wietnamska i azjatycka</span><span class="designer-credit">Design By HoangCaster</span></p><a href="#start">Do góry ↑</a></div>
   </footer>
-  <button class="floating-cart" id="floatingCart" type="button"><span>Koszyk</span><b id="floatingCartCount">0</b></button>
+  <button class="floating-cart" id="floatingCart" type="button" hidden><span>Koszyk</span><b id="floatingCartCount">0</b></button>
   <a id="whatsappOrder" href="https://wa.me/48579344577" hidden></a><a id="whatsappFooter" href="https://wa.me/48579344577" hidden></a><a id="floatingWhatsapp" href="https://wa.me/48579344577" hidden></a><a id="mobileWhatsapp" href="https://wa.me/48579344577" hidden></a>
   <div class="cart-backdrop" id="cartBackdrop" hidden></div>
   <aside class="cart-drawer" id="cartDrawer" role="dialog" aria-modal="true" aria-labelledby="cartTitle" aria-hidden="true" inert>

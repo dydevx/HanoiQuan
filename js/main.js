@@ -357,7 +357,9 @@ function updateCart(){
   const entries=Object.entries(cart).filter(([,qty])=>qty>0);
   const quantity=cartQuantity();
   document.querySelector('#cartCount').textContent=quantity;
+  const floatingCart=document.querySelector('#floatingCart');
   document.querySelector('#floatingCartCount').textContent=quantity;
+  floatingCart.hidden=quantity===0;
   cartItems.innerHTML='';
   entries.forEach(([id,qty])=>{
     const item=resolveCartItem(id); if(!item)return;
