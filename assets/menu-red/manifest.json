@@ -1,0 +1,41 @@
+{
+  "collection": "Hà Nội Quán lacquer-red menu photography",
+  "created": "2026-10-22",
+  "tool": "OpenAI built-in image generation (imagegen)",
+  "background": {
+    "direction": "continuous seamless lacquer-red studio tabletop/backdrop",
+    "brandColor": "#a62b24",
+    "finish": "subtle natural matte texture",
+    "transparent": false
+  },
+  "scope": {
+    "total": 72,
+    "asian": 32,
+    "sushi": 40,
+    "asianIds": [
+      "zupa-mala", "frytki", "dimsum", "sajgonki", "springrolls", "springrolls-krewetki",
+      "krewetki-panierowane", "ser-smazony", "kurczak-panierowany", "kungbao",
+      "wieprzowina-karmel", "sos-tajski", "curry", "slodko-kwasny", "losos", "bone",
+      "udko-salatka", "udko-smazone", "kaczka", "kaczka-salatka", "ryz", "makaron",
+      "makaron-ryzowy", "padthai", "udon", "pho", "bun", "bunbo", "pho-kurczak-sos",
+      "bunnemran", "buncha", "krab-tamaryndowy"
+    ],
+    "sushiIds": [
+      "s1", "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9", "s10",
+      "s11", "s12", "s13", "s14", "s15", "s16", "s17", "s18", "s19", "s20",
+      "s21", "s22", "s23", "s24", "s25", "s26", "s27", "s28", "s29", "s30",
+      "s31", "s32", "s33", "s34", "s35", "s36", "s37", "s38", "s39", "s40"
+    ]
+  },
+  "sourcePolicy": "Non-destructive: original restaurant files remain in assets/menu, assets/web/menu, assets/web/menu-new and assets/sushi-edited.",
+  "delivery": {
+    "format": "WebP",
+    "maxDimensions": "960 x 1280 px",
+    "quality": 84,
+    "pathPattern": "assets/menu-red/{dish-id}.webp"
+  },
+  "promptSet": {
+    "asian": "Use case: precise-object-edit. Asset type: restaurant website menu-card photograph. Edit the supplied restaurant dish photo. Preserve the dish, plate or bowl, ingredients, garnish, serving arrangement, crop, perspective, lighting and contact shadows. Replace every visible surface outside the food and serving pieces with one continuous seamless lacquer-red studio tabletop/backdrop matching exact brand color #a62b24, with subtle natural matte texture and no horizon line. Red must reach every image edge wherever no foreground object exists. Do not add, remove, duplicate, rearrange or recolor food or props. No text, logo, watermark, border, hands, utensils or extra objects. Opaque background.",
+    "sushi": "Use case: precise-object-edit. Asset type: restaurant website sushi menu-card photograph. Input image 1: edit target. Replace EVERY visible background surface outside the sushi, serving slab if present, and condiment bowls—including the pale tabletop AND any dark metal wall, counter edge, seam, or upper backdrop—with one continuous seamless lacquer-red studio tabletop/backdrop matching exact brand color #a62b24. The entire frame outside foreground objects must be red, with subtle natural matte texture and no horizon line. Preserve every sushi or sashimi piece visible in the source, exact source piece count, type, toppings, fillings, rice grains, nori, size, shape, position and arrangement. Preserve every existing bowl, serving slab, garnish and contents. Keep exact 4:3 landscape framing, perspective and object positions. Retain original lighting, focus, grain and contact shadows. Red must reach all four image edges wherever no foreground object exists; no old white, grey or black background strips; no text, logo, watermark, border, hands, utensils, extra garnish or objects. Opaque background."
+  }
+}

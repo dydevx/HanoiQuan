@@ -15,7 +15,7 @@ colors:
   selection-surface: "#3a2b20"
   action-surface: "#3c2b20"
   field-border: "#786857"
-  photo-ground: "#e9e7e3"
+  photo-ground: "#a62b24"
 typography:
   display:
     fontFamily: "Manrope, sans-serif"
@@ -147,7 +147,7 @@ Warm neutrals support gold actions and deeper burgundy regions. The frontmatter 
 - **Deep ink (`ink`)** supplies dark text on gold and deeper cart regions.
 - **Warm white (`white`)** carries main text; **warm grey (`muted`)** carries descriptions and supporting information.
 - **Warm divider (`line`)** separates containers; fields use the stronger `field-border`.
-- **Light photo ground (`photo-ground`)** provides a neutral fallback behind dish photography while images load.
+- **Lacquer red photo ground (`photo-ground`)** provides the selected brand-colored fallback behind dish photography while images load.
 - **Selection brown (`selection-surface`)** and **action brown (`action-surface`)** distinguish active categories and resting add buttons.
 
 **The Action Gold Rule.** Use gold consistently for ordering, prices and selected states; keep long descriptive text neutral.
@@ -209,7 +209,7 @@ State changes are brief and generally avoid positional movement. Global keyboard
 
 ### Category Selector
 
-Each category presents a rounded (4:3) food photograph on a dark background above a centered name and count, without an outer card or filled caption. Captions have (16px 4px 8px) padding and a (68px) minimum height. Selection uses gold text and a short (36px) underline. Pointer hover gently lifts the image and brightens it, with reduced motion respected. Existing photographs are served as 480px WebP copies from `assets/web/categories`; the all-dishes photograph uses the current hero composition. `aria-pressed` follows selection. Tablet and mobile scrolling preserve the full category set.
+Each category presents a rounded (4:3) food photograph on a dark background above a centered name and count, without an outer card or filled caption. Captions have (16px 4px 8px) padding and a (68px) minimum height. Selection uses gold text and a short (36px) underline. Pointer hover gently lifts the image and brightens it, with reduced motion respected. Category thumbnails reuse representative lacquer-red menu photographs from `assets/menu-red`. `aria-pressed` follows selection. Tablet and mobile scrolling preserve the full category set.
 
 ### Cards / Containers
 
@@ -225,9 +225,9 @@ The retained logo and restaurant name sit opposite plain links and a gold cart c
 
 ### Food Imagery and Serving Suggestions
 
-The hero is an overhead composition based on the restaurant's phở, fried spring roll and sushi photographs, with dark table space for centered text and actions. Each of the 40 catalog sushi photographs is edited from its corresponding restaurant source, with ginger, wasabi, wakame and soy sauce on the same table, matched perspective, light and contact shadows. Wasabi is contained in a tiny low ceramic condiment bowl in every catalog photograph and the hero. Sashimi retains its existing accompaniments, with wasabi placed in a bowl, and adds soy sauce. A visible Polish note identifies accompaniments as a serving suggestion; imagery does not establish price or inclusion promises.
+The hero is an overhead composition based on the restaurant's phở, fried spring roll and sushi photographs, with dark table space for centered text and actions. The selected menu-background direction is lacquer red (`#a62b24`) and is deployed across all 72 production menu photographs: 32 Asian dishes and 40 sushi items. The same collection supplies the category thumbnails and story food photography so the visual system remains continuous. Each image keeps the photographed dish, serving pieces and accompaniments while replacing the surrounding table/backdrop with a seamless lacquer-red surface, matched perspective, light and contact shadows. A visible Polish note identifies accompaniments as a serving suggestion; imagery does not establish price or inclusion promises.
 
-Sources and exact generation prompts are in `assets/image-prompts.json`, `assets/sushi-edited/manifest.json` and `assets/sushi-edited/wasabi-bowls.json`. The site serves responsive `hero-vietnamese-table` WebP derivatives, `assets/web/menu` Asian copies and 800px landscape `s*-wasabi-bowl.webp` sushi copies in `assets/sushi-edited`. Original photographs and previous generated PNGs remain. The previous transparent garnish is retained as a historical asset and is no longer rendered. New generated assets need equivalent provenance.
+Sources and exact generation prompts are in `assets/image-prompts.json`, `assets/sushi-edited/manifest.json`, `assets/sushi-edited/wasabi-bowls.json` and `assets/menu-red/manifest.json`. The site serves responsive `hero-vietnamese-table` WebP derivatives and optimized production menu files from `assets/menu-red`. Original restaurant photographs remain in their prior directories. The previous transparent garnish is retained as a historical asset and is no longer rendered. New generated assets need equivalent provenance.
 
 ### Motion
 

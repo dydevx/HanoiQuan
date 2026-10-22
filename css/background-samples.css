@@ -1,0 +1,68 @@
+:root {
+  --page: #171513;
+  --surface: #211e1b;
+  --surface-strong: #2b2723;
+  --text: #faf7f2;
+  --muted: #bbb3aa;
+  --line: #453d35;
+  --gold: #edb65c;
+  --ink: #12100f;
+  --radius: 12px;
+  --body: "Manrope", sans-serif;
+  --display: "Barlow Condensed", sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { color-scheme: dark; }
+body { margin: 0; overflow-x: hidden; background: var(--page); color: var(--text); font-family: var(--body); }
+img { display: block; max-width: 100%; }
+a { color: inherit; text-decoration: none; }
+
+.sample-page { width: min(1480px, calc(100% - 64px)); margin-inline: auto; padding: 42px 0 72px; }
+.sample-header { max-width: 760px; margin-bottom: 38px; }
+.sample-brand { display: inline-flex; align-items: center; gap: 12px; margin-bottom: 44px; font: 700 23px/1 var(--display); }
+.sample-brand img { width: 60px; height: 60px; object-fit: contain; }
+.sample-header > p:not(.sample-intro) { margin: 0 0 8px; color: var(--gold); font-size: 13px; font-weight: 800; }
+.sample-header h1 { margin: 0; font-size: clamp(42px, 5vw, 72px); line-height: 1.04; letter-spacing: -.04em; }
+.sample-intro { max-width: 62ch; margin: 18px 0 0; color: var(--muted); font-size: 16px; line-height: 1.7; }
+
+.sample-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; align-items: start; }
+.sample-card { position: relative; overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); }
+.sample-card-recommended { border-color: var(--gold); }
+.sample-card figure { margin: 0; }
+.sample-card img { width: 100%; height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.sample-card figcaption { display: grid; grid-template-columns: 20px minmax(0, 1fr); gap: 12px; min-height: 142px; padding: 20px; }
+.sample-card h2 { margin: 0 0 8px; font: 700 29px/1.05 var(--display); }
+.sample-card p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.65; }
+.color-chip { width: 18px; height: 18px; margin-top: 3px; border: 1px solid rgb(255 255 255 / 22%); border-radius: 50%; }
+.color-chip-red { background: #a62b24; }
+.color-chip-mustard { background: #d6a52e; }
+.color-chip-burgundy { background: #6f211c; }
+.recommendation { display: block; border-top: 1px solid var(--gold); padding: 12px 20px; background: var(--gold); color: var(--ink); font-size: 13px; text-align: center; }
+
+.sample-note { display: grid; grid-template-columns: 140px minmax(0, 720px); gap: 22px; margin-top: 28px; border-radius: var(--radius); padding: 24px; background: var(--surface-strong); }
+.sample-note strong { color: var(--gold); }
+.sample-note p { margin: 0; color: var(--muted); line-height: 1.65; }
+
+@media (max-width: 980px) {
+  .sample-grid { grid-template-columns: 1fr; }
+  .sample-card { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(250px, .75fr); }
+  .sample-card figure { display: contents; }
+  .sample-card figcaption { align-content: center; min-height: 0; }
+  .recommendation { position: absolute; right: 14px; top: 14px; border: 0; border-radius: 8px; padding: 8px 12px; }
+}
+
+@media (max-width: 640px) {
+  .sample-page { width: 342px; max-width: calc(100% - 32px); margin-inline: auto; padding-top: 24px; }
+  .sample-brand { margin-bottom: 34px; }
+  .sample-header h1 { font-size: clamp(38px, 11vw, 48px); text-wrap: balance; }
+  .sample-grid { gap: 16px; }
+  .sample-card { display: block; min-width: 0; }
+  .sample-card figcaption { min-height: 0; }
+  .recommendation { position: static; border-top: 1px solid var(--gold); border-radius: 0; padding: 12px 20px; }
+  .sample-note { grid-template-columns: 1fr; gap: 8px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}

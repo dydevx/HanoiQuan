@@ -161,18 +161,6 @@ printedAsianDishIds.forEach((id,index) => {
 const menuSortNumber = item => item.menuNumber.startsWith('S') ? 32 + Number(item.menuNumber.slice(1)) : Number(item.menuNumber);
 ORDER_MENU.sort((a,b) => menuSortNumber(a) - menuSortNumber(b));
 // Asian dish 18 (Udko z kurczaka smażone) stays at 39 zł; sushi S18 is 30 zł.
-// Keep corrected menu photos with their matching dishes (S17/S18 were named in reverse; S35 has balanced exposure).
-const correctedDishPhotos = {
-  s17: 'assets/menu/s18.jpg',
-  s18: 'assets/menu/s17.jpg',
-  s35: 'assets/menu/s35-balanced.jpg'
-};
-Object.entries(correctedDishPhotos).forEach(([dishId, photoPath]) => {
-  const item = ORDER_MENU.find(dish => dish.id === dishId);
-  if (item) item.image = photoPath;
-});
-// Lightweight delivery copies; keep full-resolution restaurant originals intact.
-const menuWebPhoto = src => src.replace('assets/menu/','assets/web/menu/').replace(/\.jpg$/,'.webp');
 // Frame the photographed serving, rather than shrinking portrait photos into side bars.
 // Taller compositions preserve separate rice/noodle plates and sauce bowls.
 const dishPhotoFrames = {
@@ -183,7 +171,7 @@ const dishPhotoFrames = {
   springrolls: {position:'50% 65%'},
   'springrolls-krewetki': {ratio:1,position:'50% 62%'},
   'krewetki-panierowane': {position:'50% 78%'},
-  kungbao: {ratio:1,position:'50% 65%'},
+  kungbao: {ratio:4/3,position:'50% 50%'},
   'wieprzowina-karmel': {ratio:1,position:'50% 62%'},
   'sos-tajski': {ratio:1,position:'50% 63%'},
   curry: {ratio:1,position:'50% 47%'},
@@ -207,35 +195,10 @@ const dishPhotoFrames = {
   'krab-tamaryndowy': {ratio:1,position:'50% 48%'}
 };
 const dishPhotoRatio = item => dishPhotoFrames[item.id]?.ratio ?? 4/3;
+// One optimized lacquer-red production photograph per menu item.
 ORDER_MENU.forEach(item => {
-  item.image = item.category.startsWith('Sushi')
-    ? `assets/sushi-edited/${item.id}-wasabi-bowl.webp`
-    : menuWebPhoto(item.image);
-  if (item.images) item.images = item.images.map(menuWebPhoto);
-});
-// Latest restaurant photos, renamed and optimized for stable web paths.
-const latestDishPhotos = {
-  'wieprzowina-karmel': 'assets/web/menu-new/wieprzowina-karmel.webp',
-  'springrolls-krewetki': 'assets/web/menu-new/springrolls-krewetki.webp',
-  'sos-tajski': 'assets/web/menu-new/sos-tajski.webp',
-  udon: 'assets/web/menu-new/udon.webp',
-  pho: 'assets/web/menu-new/pho.webp',
-  kungbao: 'assets/web/menu-new/kungbao.webp',
-  ryz: 'assets/web/menu-new/ryz.webp',
-  'udko-smazone': 'assets/web/menu-new/udko-smazone.webp',
-  losos: 'assets/web/menu-new/losos.webp',
-  buncha: 'assets/web/menu-new/buncha.webp',
-  'slodko-kwasny': 'assets/web/menu-new/slodko-kwasny.webp',
-  bunbo: 'assets/web/menu-new/bunbo.webp',
-  'krab-tamaryndowy': 'assets/web/menu-new/krab-tamaryndowy.webp',
-  kaczka: 'assets/web/menu-new/kaczka.webp',
-  curry: 'assets/web/menu-new/curry.webp',
-  bun: 'assets/web/menu-new/bun.webp',
-  bone: 'assets/web/menu-new/bone.webp'
-};
-Object.entries(latestDishPhotos).forEach(([dishId, photoPath]) => {
-  const item = ORDER_MENU.find(dish => dish.id === dishId);
-  if (item) item.image = photoPath;
+  item.image = `assets/menu-red/${item.id}.webp`;
+  if (item.images) item.images = [item.image];
 });
 const money = value => new Intl.NumberFormat('pl-PL',{style:'currency',currency:'PLN'}).format(value);
 let cart = {};
@@ -270,14 +233,14 @@ function renderCategories(){
     const button=document.createElement('button');
     button.type='button'; button.className='category-tab'+(category===activeCategory?' active':'');
     const categoryPhotos = {
-      Wszystkie:'assets/web/categories/all.webp', Zupy:'assets/web/categories/soups.webp',
-      Przystawki:'assets/web/categories/starters.webp', 'Dania główne':'assets/web/categories/mains.webp',
-      'Ryż i makarony':'assets/web/categories/noodles.webp', Sushi:'assets/web/categories/sushi.webp',
-      'Sushi Set':'assets/web/categories/sets.webp'
+      Wszystkie:'assets/menu-red/kungbao.webp', Zupy:'assets/menu-red/pho.webp',
+      Przystawki:'assets/menu-red/sajgonki.webp', 'Dania główne':'assets/menu-red/kungbao.webp',
+      'Ryż i makarony':'assets/menu-red/padthai.webp', Sushi:'assets/menu-red/s21.webp',
+      'Sushi Set':'assets/menu-red/s39.webp'
     };
     const count = ORDER_MENU.filter(item=>category==='Wszystkie'||item.category===category).length;
     button.dataset.category=category;
-    button.innerHTML=`<span class="category-photo"><img src="${menuWebPhoto(categoryPhotos[category])}" alt="" width="320" height="220" loading="lazy"></span><span class="category-copy"><span class="category-name">${category}</span><small>${count} pozycji</small></span>`;
+    button.innerHTML=`<span class="category-photo"><img src="${categoryPhotos[category]}" alt="" width="320" height="220" loading="lazy"></span><span class="category-copy"><span class="category-name">${category}</span><small>${count} pozycji</small></span>`;
     button.setAttribute('aria-pressed',String(category===activeCategory));
     button.addEventListener('click',()=>{
       activeCategory=category;

@@ -427,7 +427,7 @@ h2 { font: 700 clamp(36px, 3.7vw, 52px)/1.12 var(--body); letter-spacing: -.03em
 .menu-empty-state button { min-height: 44px; margin-top: 10px; border: 1px solid #705139; border-radius: 8px; padding: 10px 16px; background: #3c2b20; color: var(--gold); font-weight: 700; cursor: pointer; }
 .menu-empty-state button:hover { background: var(--gold); color: var(--ink); }
 .order-card { background: var(--paper-2); border: 0; border-radius: 12px; }
-.dish-visual { background: #e9e7e3; aspect-ratio: var(--row-photo-ratio, 4 / 3); }
+.dish-visual { background: #a62b24; aspect-ratio: var(--row-photo-ratio, 4 / 3); }
 .dish-visual img { object-fit: cover; object-position: var(--photo-position, 50% 50%); transition: none; }
 .dish-visual.sushi-visual { aspect-ratio: 4 / 3; }
 .dish-visual.sushi-visual img { object-fit: cover; object-position: center; }
