@@ -169,7 +169,7 @@ const dishPhotoFrames = {
   dimsum: {ratio:1,position:'50% 78%'},
   sajgonki: {position:'50% 65%'},
   springrolls: {position:'50% 65%'},
-  'springrolls-krewetki': {ratio:1,position:'50% 62%'},
+  'springrolls-krewetki': {ratio:4/3,position:'50% 50%'},
   'krewetki-panierowane': {position:'50% 78%'},
   kungbao: {ratio:4/3,position:'50% 50%'},
   'wieprzowina-karmel': {ratio:1,position:'50% 62%'},
@@ -197,7 +197,9 @@ const dishPhotoFrames = {
 const dishPhotoRatio = item => dishPhotoFrames[item.id]?.ratio ?? 4/3;
 // One optimized wine-red production photograph per menu item.
 ORDER_MENU.forEach(item => {
-  item.image = `assets/menu-burgundy/${item.id}.webp`;
+  item.image = item.id === 'springrolls-krewetki'
+    ? 'assets/menu-burgundy/springrolls-krewetki-horizontal.webp'
+    : `assets/menu-burgundy/${item.id}.webp`;
   if (item.images) item.images = [item.image];
 });
 const money = value => new Intl.NumberFormat('pl-PL',{style:'currency',currency:'PLN'}).format(value);
