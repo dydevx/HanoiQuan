@@ -15,7 +15,7 @@ colors:
   selection-surface: "#3a2b20"
   action-surface: "#3c2b20"
   field-border: "#786857"
-  photo-ground: "#a62b24"
+  photo-ground: "#6f211c"
 typography:
   display:
     fontFamily: "Manrope, sans-serif"
@@ -209,7 +209,7 @@ State changes are brief and generally avoid positional movement. Global keyboard
 
 ### Category Selector
 
-Each category presents a rounded (4:3) food photograph on a dark background above a centered name and count, without an outer card or filled caption. Captions have (16px 4px 8px) padding and a (68px) minimum height. Selection uses gold text and a short (36px) underline. Pointer hover gently lifts the image and brightens it, with reduced motion respected. Category thumbnails reuse representative lacquer-red menu photographs from `assets/menu-red`. `aria-pressed` follows selection. Tablet and mobile scrolling preserve the full category set.
+Each category presents a rounded (4:3) food photograph on a dark background above a centered name and count, without an outer card or filled caption. Captions have (16px 4px 8px) padding and a (68px) minimum height. Selection uses gold text and a short (36px) underline. Pointer hover gently lifts the image and brightens it, with reduced motion respected. Category thumbnails reuse representative wine-red menu photographs from `assets/menu-burgundy`. `aria-pressed` follows selection. Tablet and mobile scrolling preserve the full category set.
 
 ### Cards / Containers
 
@@ -225,9 +225,9 @@ The retained logo and restaurant name sit opposite plain links and a gold cart c
 
 ### Food Imagery and Serving Suggestions
 
-The hero is an overhead composition based on the restaurant's phở, fried spring roll and sushi photographs, with dark table space for centered text and actions. The selected menu-background direction is lacquer red (`#a62b24`) and is deployed across all 72 production menu photographs: 32 Asian dishes and 40 sushi items. The same collection supplies the category thumbnails and story food photography so the visual system remains continuous. Each image keeps the photographed dish, serving pieces and accompaniments while replacing the surrounding table/backdrop with a seamless lacquer-red surface, matched perspective, light and contact shadows. A visible Polish note identifies accompaniments as a serving suggestion; imagery does not establish price or inclusion promises.
+The hero is an overhead composition based on the restaurant's phở, fried spring roll and sushi photographs, with dark table space for centered text and actions. The selected menu-background direction is wine red (`#6f211c`) and is deployed across all 72 production menu photographs: 32 Asian dishes and 40 sushi items. The same collection supplies the category thumbnails and story food photography so the visual system remains continuous. Each image keeps the photographed dish, serving pieces and accompaniments while recoloring the surrounding table/backdrop to a seamless wine-red surface while preserving texture, light and contact shadows. A visible Polish note identifies accompaniments as a serving suggestion; imagery does not establish price or inclusion promises.
 
-Sources and exact generation prompts are in `assets/image-prompts.json`, `assets/sushi-edited/manifest.json`, `assets/sushi-edited/wasabi-bowls.json` and `assets/menu-red/manifest.json`. The site serves responsive `hero-vietnamese-table` WebP derivatives and optimized production menu files from `assets/menu-red`. Original restaurant photographs remain in their prior directories. The previous transparent garnish is retained as a historical asset and is no longer rendered. New generated assets need equivalent provenance.
+Sources and exact generation prompts are in `assets/image-prompts.json`, `assets/sushi-edited/manifest.json`, `assets/sushi-edited/wasabi-bowls.json`, `assets/menu-red/manifest.json` and `assets/menu-burgundy/manifest.json`. The site serves responsive `hero-vietnamese-table` WebP derivatives and optimized production menu files from `assets/menu-burgundy`. The lacquer-red collection and original restaurant photographs remain in their prior directories. The previous transparent garnish is retained as a historical asset and is no longer rendered. New generated assets need equivalent provenance.
 
 ### Motion
 

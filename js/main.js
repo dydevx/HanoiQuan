@@ -195,9 +195,9 @@ const dishPhotoFrames = {
   'krab-tamaryndowy': {ratio:1,position:'50% 48%'}
 };
 const dishPhotoRatio = item => dishPhotoFrames[item.id]?.ratio ?? 4/3;
-// One optimized lacquer-red production photograph per menu item.
+// One optimized wine-red production photograph per menu item.
 ORDER_MENU.forEach(item => {
-  item.image = `assets/menu-red/${item.id}.webp`;
+  item.image = `assets/menu-burgundy/${item.id}.webp`;
   if (item.images) item.images = [item.image];
 });
 const money = value => new Intl.NumberFormat('pl-PL',{style:'currency',currency:'PLN'}).format(value);
@@ -233,10 +233,10 @@ function renderCategories(){
     const button=document.createElement('button');
     button.type='button'; button.className='category-tab'+(category===activeCategory?' active':'');
     const categoryPhotos = {
-      Wszystkie:'assets/menu-red/kungbao.webp', Zupy:'assets/menu-red/pho.webp',
-      Przystawki:'assets/menu-red/sajgonki.webp', 'Dania główne':'assets/menu-red/kungbao.webp',
-      'Ryż i makarony':'assets/menu-red/padthai.webp', Sushi:'assets/menu-red/s21.webp',
-      'Sushi Set':'assets/menu-red/s39.webp'
+      Wszystkie:'assets/menu-burgundy/kungbao.webp', Zupy:'assets/menu-burgundy/pho.webp',
+      Przystawki:'assets/menu-burgundy/sajgonki.webp', 'Dania główne':'assets/menu-burgundy/kungbao.webp',
+      'Ryż i makarony':'assets/menu-burgundy/padthai.webp', Sushi:'assets/menu-burgundy/s21.webp',
+      'Sushi Set':'assets/menu-burgundy/s39.webp'
     };
     const count = ORDER_MENU.filter(item=>category==='Wszystkie'||item.category===category).length;
     button.dataset.category=category;

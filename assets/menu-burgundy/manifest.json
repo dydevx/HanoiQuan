@@ -1,0 +1,443 @@
+{
+  "collection": "Hà Nội Quán wine-red menu photography",
+  "created": "2026-10-24",
+  "sourceDirectory": "assets/menu-red",
+  "outputDirectory": "assets/menu-burgundy",
+  "sourceColor": "#a62b24",
+  "targetColor": "#6f211c",
+  "method": "Edge-connected red-background mask with texture-preserving channel remap",
+  "files": [
+    {
+      "file": "bone.webp",
+      "width": 960,
+      "height": 1280,
+      "backgroundCoverage": 0.5145
+    },
+    {
+      "file": "bun.webp",
+      "width": 960,
+      "height": 1280,
+      "backgroundCoverage": 0.5257
+    },
+    {
+      "file": "bunbo.webp",
+      "width": 960,
+      "height": 1280,
+      "backgroundCoverage": 0.6244
+    },
+    {
+      "file": "buncha.webp",
+      "width": 960,
+      "height": 1280,
+      "backgroundCoverage": 0.4694
+    },
+    {
+      "file": "bunnemran.webp",
+      "width": 959,
+      "height": 1280,
+      "backgroundCoverage": 0.4889
+    },
+    {
+      "file": "curry.webp",
+      "width": 960,
+      "height": 1280,
+      "backgroundCoverage": 0.4696
+    },
+    {
+      "file": "dimsum.webp",
+      "width": 959,
+      "height": 1280,
+      "backgroundCoverage": 0.635
+    },
+    {
+      "file": "frytki.webp",
+      "width": 959,
+      "height": 1280,
+      "backgroundCoverage": 0.7106
+    },
+    {
+      "file": "kaczka-salatka.webp",
+      "width": 959,
+      "height": 1280,
+      "backgroundCoverage": 0.5918
+    },
+    {
+      "file": "kaczka.webp",
+      "width": 960,
+      "height": 1280,
+      "backgroundCoverage": 0.6112
+    },
+    {
+      "file": "krab-tamaryndowy.webp",
+      "width": 960,
+      "height": 1280,
+      "backgroundCoverage": 0.6305
+    },
+    {
+      "file": "krewetki-panierowane.webp",
+      "width": 959,
+      "height": 1280,
+      "backgroundCoverage": 0.7425
+    },
+    {
+      "file": "kungbao.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.3761
+    },
+    {
+      "file": "kurczak-panierowany.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.4624
+    },
+    {
+      "file": "losos.webp",
+      "width": 960,
+      "height": 1280,
+      "backgroundCoverage": 0.504
+    },
+    {
+      "file": "makaron-ryzowy.webp",
+      "width": 959,
+      "height": 1280,
+      "backgroundCoverage": 0.7121
+    },
+    {
+      "file": "makaron.webp",
+      "width": 959,
+      "height": 1280,
+      "backgroundCoverage": 0.676
+    },
+    {
+      "file": "padthai.webp",
+      "width": 959,
+      "height": 1280,
+      "backgroundCoverage": 0.6973
+    },
+    {
+      "file": "pho-kurczak-sos.webp",
+      "width": 959,
+      "height": 1280,
+      "backgroundCoverage": 0.7201
+    },
+    {
+      "file": "pho.webp",
+      "width": 960,
+      "height": 1280,
+      "backgroundCoverage": 0.5259
+    },
+    {
+      "file": "ryz.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.5485
+    },
+    {
+      "file": "s1.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.8155
+    },
+    {
+      "file": "s2.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.8636
+    },
+    {
+      "file": "s3.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.8331
+    },
+    {
+      "file": "s4.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.6773
+    },
+    {
+      "file": "s5.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.7111
+    },
+    {
+      "file": "s6.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.7545
+    },
+    {
+      "file": "s7.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.6892
+    },
+    {
+      "file": "s8.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.713
+    },
+    {
+      "file": "s9.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.7306
+    },
+    {
+      "file": "s10.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.6762
+    },
+    {
+      "file": "s11.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.7266
+    },
+    {
+      "file": "s12.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.72
+    },
+    {
+      "file": "s13.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.792
+    },
+    {
+      "file": "s14.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.8615
+    },
+    {
+      "file": "s15.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.8065
+    },
+    {
+      "file": "s16.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.8492
+    },
+    {
+      "file": "s17.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.8176
+    },
+    {
+      "file": "s18.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.8383
+    },
+    {
+      "file": "s19.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.7704
+    },
+    {
+      "file": "s20.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.8074
+    },
+    {
+      "file": "s21.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.6939
+    },
+    {
+      "file": "s22.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.7934
+    },
+    {
+      "file": "s23.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.7236
+    },
+    {
+      "file": "s24.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.7055
+    },
+    {
+      "file": "s25.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.6843
+    },
+    {
+      "file": "s26.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.8962
+    },
+    {
+      "file": "s27.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.8148
+    },
+    {
+      "file": "s28.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.8908
+    },
+    {
+      "file": "s29.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.8441
+    },
+    {
+      "file": "s30.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.6342
+    },
+    {
+      "file": "s31.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.8627
+    },
+    {
+      "file": "s32.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.5194
+    },
+    {
+      "file": "s33.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.5688
+    },
+    {
+      "file": "s34.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.7581
+    },
+    {
+      "file": "s35.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.7316
+    },
+    {
+      "file": "s36.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.6255
+    },
+    {
+      "file": "s37.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.754
+    },
+    {
+      "file": "s38.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.8179
+    },
+    {
+      "file": "s39.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.593
+    },
+    {
+      "file": "s40.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.6744
+    },
+    {
+      "file": "sajgonki.webp",
+      "width": 959,
+      "height": 1280,
+      "backgroundCoverage": 0.6609
+    },
+    {
+      "file": "ser-smazony.webp",
+      "width": 960,
+      "height": 720,
+      "backgroundCoverage": 0.4893
+    },
+    {
+      "file": "slodko-kwasny.webp",
+      "width": 960,
+      "height": 1280,
+      "backgroundCoverage": 0.5261
+    },
+    {
+      "file": "sos-tajski.webp",
+      "width": 960,
+      "height": 1280,
+      "backgroundCoverage": 0.5247
+    },
+    {
+      "file": "springrolls-krewetki.webp",
+      "width": 960,
+      "height": 1280,
+      "backgroundCoverage": 0.6528
+    },
+    {
+      "file": "springrolls.webp",
+      "width": 959,
+      "height": 1280,
+      "backgroundCoverage": 0.6912
+    },
+    {
+      "file": "udko-salatka.webp",
+      "width": 959,
+      "height": 1280,
+      "backgroundCoverage": 0.6168
+    },
+    {
+      "file": "udko-smazone.webp",
+      "width": 960,
+      "height": 1280,
+      "backgroundCoverage": 0.4909
+    },
+    {
+      "file": "udon.webp",
+      "width": 960,
+      "height": 1280,
+      "backgroundCoverage": 0.5301
+    },
+    {
+      "file": "wieprzowina-karmel.webp",
+      "width": 960,
+      "height": 1280,
+      "backgroundCoverage": 0.5735
+    },
+    {
+      "file": "zupa-mala.webp",
+      "width": 959,
+      "height": 1280,
+      "backgroundCoverage": 0.6934
+    }
+  ]
+}
