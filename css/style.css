@@ -594,7 +594,7 @@ body { overflow-x: hidden; font-size: 17px; }
 .header-phone strong { margin-top: 4px; color: var(--gold); font-size: 15px; font-variant-numeric: tabular-nums; }
 .header-phone:hover strong { color: #f5cb89; }
 .hero { min-height: min(690px, calc(100dvh - 84px)); background: #9f1118; }
-.hero .hero-photo { object-position: center; }
+.hero .hero-photo { object-position: center 20%; }
 .hero::after { background: linear-gradient(0deg, rgb(39 3 5 / 30%), rgb(39 3 5 / 8%) 55%, rgb(39 3 5 / 20%)), radial-gradient(ellipse at center, rgb(35 3 5 / 58%), rgb(35 3 5 / 5%) 76%); }
 .hero h1 { max-width: 860px; font-size: clamp(52px, 6.1vw, 90px); }
 .hero-title-description { font-size: .54em; }
