@@ -654,7 +654,7 @@ body { overflow-x: hidden; font-size: 17px; }
   .header-phone strong { margin: 0; font-size: 14px; }
   .nav-cta { grid-area: cart; min-height: 44px; margin-left: 0; padding: 8px 10px; font-size: 13px; justify-self: end; }
   .hero { min-height: min(620px, calc(100dvh - 72px)); }
-  .hero .hero-photo { object-position: center; }
+  .hero .hero-photo { object-position: right center; }
   .hero::after { background: linear-gradient(0deg, rgb(39 3 5 / 40%), rgb(39 3 5 / 12%) 65%, rgb(39 3 5 / 24%)), radial-gradient(ellipse at center, rgb(35 3 5 / 52%), rgb(35 3 5 / 2%) 74%); }
   .hero-content { padding-block: 52px; }
   .hero h1, .hero-content > p { width: 100%; max-width: 100%; overflow-wrap: anywhere; }
@@ -724,7 +724,7 @@ body { overflow-x: hidden; font-size: 17px; }
     min-height: min(620px, calc(100dvh - 68px));
     align-items: stretch;
   }
-  .hero .hero-photo { object-position: center; }
+  .hero .hero-photo { object-position: right center; }
   .hero::after {
     background:
       linear-gradient(0deg, rgb(24 4 5 / 76%), rgb(35 4 6 / 42%) 62%, rgb(35 4 6 / 8%) 100%),
