@@ -829,3 +829,33 @@ body { overflow-x: hidden; font-size: 17px; }
   .hero-actions { gap: 7px; }
   .hero-actions .btn { font-size: 11px; }
 }
+
+/* Mobile menu cards: keep every dish compact and give it an unmistakable edge. */
+@media (max-width: 520px) {
+  .order-grid {
+    grid-auto-rows: max-content;
+    align-items: start;
+    gap: 20px;
+  }
+
+  .order-card {
+    height: auto;
+    min-height: 0;
+    align-self: start;
+    border: 1px solid #735f48;
+    border-bottom: 3px solid var(--gold);
+    background: #24201c;
+    box-shadow: 0 10px 24px rgb(0 0 0 / 18%);
+  }
+
+  .order-card-content {
+    flex: 0 0 auto;
+    min-height: 0;
+  }
+
+  .order-card-foot {
+    margin-top: 18px;
+    padding-top: 16px;
+    border-top: 1px solid #554a3f;
+  }
+}

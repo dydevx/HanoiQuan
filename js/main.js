@@ -1,6 +1,8 @@
+const WHATSAPP_NUMBER = '48579344577';
 const SITE_CONFIG = {
-  phone: '+48579344577',
-  whatsapp: 'https://wa.me/48579344577?text=' + encodeURIComponent('Dzień dobry, chciałbym zarezerwować stolik w Hà Nội Quán.'),
+  phone: `+${WHATSAPP_NUMBER}`,
+  whatsappNumber: WHATSAPP_NUMBER,
+  whatsapp: `https://wa.me/${WHATSAPP_NUMBER}?text=` + encodeURIComponent('Dzień dobry, chciałbym zarezerwować stolik w Hà Nội Quán.'),
   social: { facebook: '', instagram: '', messenger: '' }
 };
 
@@ -363,12 +365,14 @@ document.querySelector('#sendOrder').addEventListener('click',()=>{
   const error=document.querySelector('#checkoutError'); error.hidden=true;
   if(!checkoutForm.reportValidity()){error.textContent='Uzupełnij wymagane dane kontaktowe.';error.hidden=false;return}
   const data=new FormData(checkoutForm); const entries=Object.entries(cart).filter(([,qty])=>qty>0);
+  if(!entries.length){error.textContent='Koszyk jest pusty. Dodaj danie przed wysłaniem zamówienia.';error.hidden=false;return}
   const total=entries.reduce((sum,[id,qty])=>sum+resolveCartItem(id).price*qty,0);
   const lines=entries.map(([id,qty],index)=>{const item=resolveCartItem(id);return `${index+1}. ${item.name} × ${qty} - ${money(item.price*qty)}`});
   const message=['Dzień dobry, chcę złożyć zamówienie w Hà Nội Quán.','','ZAMÓWIENIE:',...lines,'',`RAZEM: ${money(total)}`,'',`Sposób odbioru: ${data.get('fulfilment')}`,`Imię: ${data.get('customerName')}`,`Telefon: ${data.get('customerPhone')}`];
   if(data.get('address'))message.push(`Adres: ${data.get('address')}`); if(data.get('notes'))message.push(`Uwagi: ${data.get('notes')}`);
   message.push('','Proszę o potwierdzenie ceny i czasu realizacji.');
-  window.open('https://wa.me/48579344577?text='+encodeURIComponent(message.join('\n')),'_blank','noopener');
+  const whatsappUrl=`https://wa.me/${SITE_CONFIG.whatsappNumber}?text=${encodeURIComponent(message.join('\n'))}`;
+  window.location.assign(whatsappUrl);
 });
 document.addEventListener('keydown',event=>{
   if(event.key==='Escape'){
