@@ -842,10 +842,10 @@ body { overflow-x: hidden; font-size: 17px; }
     height: auto;
     min-height: 0;
     align-self: start;
-    border: 1px solid #735f48;
-    border-bottom: 3px solid var(--gold);
+    border: 2px solid #987345;
+    border-bottom: 5px solid var(--gold);
     background: #24201c;
-    box-shadow: 0 10px 24px rgb(0 0 0 / 18%);
+    box-shadow: 0 12px 26px rgb(0 0 0 / 28%);
   }
 
   .order-card-content {
@@ -856,6 +856,9 @@ body { overflow-x: hidden; font-size: 17px; }
   .order-card-foot {
     margin-top: 18px;
     padding-top: 16px;
-    border-top: 1px solid #554a3f;
+    border-top: 2px solid #6c5946;
   }
+
+  .dish-price { font-size: 24px; }
+  .add-to-cart { min-height: 48px; font-size: 16px; font-weight: 800; }
 }
